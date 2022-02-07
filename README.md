@@ -1,8 +1,3 @@
-# salesforce-b2c-commerce-apis
-Postman Collection for Salesforce B2C Commerce APIs
-
-
-
 # Salesforce B2C Commerce API Postman collection
 
 Postman Collection demonstrating how to use the [B2C Commerce](https://www.salesforce.com/au/products/commerce-cloud/ecommerce/) REST API.
