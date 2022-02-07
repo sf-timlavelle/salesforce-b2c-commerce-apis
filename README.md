@@ -9,6 +9,8 @@ To use the latest published version, click the following button to import the AN
 
 [![Run in Postman](https://s3.amazonaws.com/postman-static/run-button.png)](https://app.getpostman.com/run-collection/5d9ae743a661a15d64bb)
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1159937-d4af4505-c1e8-994e-32e8-4faf874f9956)
+
 You can also download the collection file from this repo, then import directly into Postman.
 
 ### Prerequisites
