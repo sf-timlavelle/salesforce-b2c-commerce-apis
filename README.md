@@ -34,8 +34,8 @@ More information on managing Postman environments and variables can be found [he
 
 |Variable  |Default value               |Set in         |May override in  |Example|
 |----------|----------------------------|---------------|-----------------|-------|
-|`commerce_AM_clientID` |-                           |Environment    |-                |-      |
-|`commerce_AM_passwd`|-|Collection     |Environment      |`https://api.eu.sparkpost.com`|
+|`commerce_AM_clientID` |-|Environment|-|-|
+|`commerce_AM_passwd`|-|Environment|Environment|-|
 
 ### Contribute
 
