@@ -70,7 +70,7 @@ To help with the API request in the Data and Shop Folders, I am dynamically addi
 
 ## Contribute
 
-I welcome your contributions!  Please speak to [Tim Lavelle](@sf-timlavelle) on how to become a contributor to this Collection
+I welcome your contributions!  Please speak to [Tim Lavelle](mailto:timothy.lavelle@salesforce.com) on how to become a contributor to this Collection
 
 ## Change Log
 
