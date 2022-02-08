@@ -70,7 +70,7 @@ As it is best practice to have different Roles and Permissions for the OCAPI Dat
 
 The Javascript in this folder is ran for every request in the OCAPI folder and checks if the current token is still valid and if it is not, it will generate a new token and store the values in the Environment file. If the current token is valid, it will skip token generation and execute the requested API request. 
 
-### Data & Shop Folder Pre-Request Script
+### OCAPI > Data & Shop Folder Pre-Request Script
 
 To help with the API request in the Data and Shop Folders, I am dynamically adding two headers into each requests so API calls can be made successfully. In this pre-request script, I am dynamiclly insert `Authorization` and `client_id` headers. 
 
