@@ -36,10 +36,10 @@ In order for the API's to work, below is the list of required fields you'll need
 |----------|----------------------------|---------------|
 |`commerce_AM_clientID` |Environment|Account Manager Client-ID|
 |`commerce_AM_passwd`|Environment|Account Manager Password, generated in AM|
-|`commerce_realmID` |Environment|`zzap` - Default APAC realm|
+|`commerce_realmID` |Environment|Sandbox Realm you're working in|
 |`commerce_instanceID`|Environment|Your instance ID|
 |`commerce_SCAPI_shortCode` |Environment|Found in Administration => Salesforce Commerce API Settings|
-|`commerce_sandbox_host`|Environment|Your sandbox host: `sandbox.us02.dx.commercecloud.salesforce.com`|
+|`commerce_sandbox_host`|Environment|Your sandbox host. Ex: `sandbox.us02.dx.commercecloud.salesforce.com`|
 |`commerce_sandbox_accessCode` |Environment|-|
 |`commerce_sandbox_SiteID`|-Environment|The ID of the site you're working with|
 
