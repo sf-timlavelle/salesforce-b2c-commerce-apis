@@ -28,7 +28,7 @@ A collection-scope variable `baseUrl` points to a collection of environment-scop
 
 ## Postman Environment-scope variables
 
-In order for the API's to work, below is the list of required fields before making your first API call
+In order for the API's to work, below is the list of required fields you'll need to update before making your first API call
 
 ### Manual Variables to enter into the Salesforce Cloud evironment
 
@@ -45,12 +45,15 @@ In order for the API's to work, below is the list of required fields before maki
 
 ### Dynamically Populated Environment-scope variables
 
-|Variable  |Default value               |Set in         |Description|
-|`baseUrl` |-|-|
-|`commerce_sandbox_Encoded`|-|Environment|-|
-|`commerce_sandbox_encodedTimeStamp` |-|Environment|-|
-|`commerce_sandbox_bearerToken`|-|Environment|-|
-|`commerce_sandbox_expiresIn` |-|Environment|-|
+The below list of variables are dynamically populated via Pre-Request scripts which are described later in this Readme. 
+
+|Variable  |Set in|Description|
+|----------|----------------------------|---------------|
+|`baseUrl` |Collection|Creates the baseUrl variable which is used on all APIs. This is found in the Salesforce B2C Commerce Cloud Collection|
+|`commerce_sandbox_Encoded`|Environment|Dynamically generated Base64 encoded sequence|
+|`commerce_sandbox_encodedTimeStamp` |Environment|Timestamp of when the Token was generated|
+|`commerce_sandbox_bearerToken`|Environment|API Bearer token for susequent API calls|
+|`commerce_sandbox_expiresIn` |Environment|# of seconds API exires|
 
 
 ## Pre-Request Scripts
