@@ -22,10 +22,9 @@ You can also download the collection file from this repo, then import directly i
 
 The collection is arranged in folders according to the API endpoints (OCAPI/SCAPI).
 
-All requests require a valid Salesforce Account Manager API Client ID and Secret (Password).  The collection requests have a placeholder multiple variablea to handle for this.
-This should be set in your [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) i.e. outside the collection itself. This should help avoid accidental commits of API keys to repos.
+All requests require a valid Salesforce Account Manager API Client ID and Secret (Password). This should be set in your [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) i.e. outside the collection itself. This should help avoid accidental commits of API keys to repos.
 
-A collection-scope variable `BASE_URL` points to the a collection of Sandbox URLs to build your host `https://api.sparkpost.com`.
+A collection-scope variable `baseUrl` points to a collection of environment-scope variables to build your host.
 
 SparkPost Enterprise customers and SparkPost EU customers can override this in your Postman environment to point to the [appropriate host](https://developers.sparkpost.com/api/index.html#header-api-endpoints).
 For instance, if you are a SparkPost EU customer, you set the Postman environment variable `BASE_URL` to `https://sandbox.us02.dx.commercecloud.salesforce.com`.
