@@ -80,7 +80,7 @@ I welcome your contributions!  Please speak to [Tim Lavelle](mailto:timothy.lave
 
 Currently all the API's in this Collection are managed by [Tim Lavelle](mailto:timothy.lavelle@salesforce.com) within his Postman account and updates are automatically synced to this repo. Any changes you make locally will not update the main repo, but you can suggest changes and make a pull requst. 
 
-## TO-Do
+## TO-DO
 
 1. Add OCAPI Meta APIs
 2. Add SCAPI APIs
