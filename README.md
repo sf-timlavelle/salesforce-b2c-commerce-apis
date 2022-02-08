@@ -78,6 +78,15 @@ To help with the API request in the Data and Shop Folders, I am dynamically addi
 
 I welcome your contributions!  Please speak to [Tim Lavelle](mailto:timothy.lavelle@salesforce.com) on how to become a contributor to this Collection
 
+Currently all the API's in this Collection are managed by [Tim Lavelle](mailto:timothy.lavelle@salesforce.com) within his Postman account and updates are automatically synced to this repo. Any changes you make locally will not update the main repo, but you can suggest changes and make a pull requst. 
+
+## TO-Do
+
+1. Add OCAPI Meta APIs
+2. Add SCAPI APIs
+3. Add SCAPI Authentication Automation
+4. Add Flows for common practices for demo setup: Category Creation, Product Taxonomy Creation, Product Imports, etc...
+
 ## Change Log
 
 ### 1.0 - 8 Feb, 2022
