@@ -30,23 +30,35 @@ For instance, if you are a SparkPost EU customer, you set the Postman environmen
 
 More information on managing Postman environments and variables can be found [here](https://learning.postman.com/docs/sending-requests/variables/).
 
-### Required B2C Commerce Variables
+## Required B2C Commerce Variables
 
-|Variable  |Default value               |Set in         |May override in  |Example|
-|----------|----------------------------|---------------|-----------------|-------|
-|`commerce_AM_clientID` |-|Environment|-|-|
-|`commerce_AM_passwd`|-|Environment|Environment|-|
+|Variable  |Default value               |Set in         |Example|
+|----------|----------------------------|---------------|-------|
+|`baseUrl` |-|Collection|https://{{commerce_realmID}}-{{commerce_instanceID}}.{{commerce_sandbox_host}}/s/-/dw/data/v{{commerce_APIVersion}}|
+|`commerce_AM_clientID` |-|Environment|-|
+|`commerce_AM_passwd`|-|Environment|-|
+|`commerce_realmID` |-|Environment|`zzap`|
+|`commerce_instanceID`|-|Environment|`177`|
+|`commerce_SCAPI_shortCode` |-|Environment|-|
+|`commerce_sandbox_host`|-|Environment|`sandbox.us02.dx.commercecloud.salesforce.com`|
+|`commerce_sandbox_accessCode` |-|Environment|-|
+|`commerce_sandbox_Encoded`|-|Environment|-|
+|`commerce_sandbox_encodedTimeStamp` |-|Environment|-|
+|`commerce_sandbox_bearerToken`|-|Environment|-|
+|`commerce_sandbox_expiresIn` |-|Environment|-|
+|`commerce_sandbox_SiteID`|-|Environment|-|
+
+## Pre-Request Scripts
+Inside this collection, there are two Pre-Request scripts which should not be touched as it handles core functionality needed for the APIs to run as smoothly and seemlessly as possible.
+
+### OCAPI Folder Pre-Request Script
+As it is best practice to have different Roles and Permissions for the OCAPI Data and Shop API endpoints, I have configured automatic Token Generation and Automatic Token Refresh generation on this folders Pre-Request Script. 
+
+The Javascript in this folder is ran for every request in the OCAPI folder and checks if the current token is still valid and if it is not, it will generate a new token and store the values in the Environment file. If the current token is valid, it will skip token generation and execute the requested API request. 
 
 ### Contribute
 
-I welcome your contributions!  See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to help out.
+I welcome your contributions!  Please speak to [Tim Lavelle](@sf-timlavelle) on how to become a contributor to this Collection
 
 ### Change Log
 
-[See ChangeLog here](CHANGELOG.md)
-
-## See Also
-
-[SparkPost API documentation](https://developers.sparkpost.com/api/)
-
-[Postman API development tool](https://www.getpostman.com/)
