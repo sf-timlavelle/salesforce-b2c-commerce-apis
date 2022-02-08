@@ -1,4 +1,4 @@
-# Salesforce B2C Commerce API Postman collection for SE's
+# Salesforce B2C Commerce API Postman for SE's
 
 I've created this collection by exporting the API-Explorer JSON file and importing into Postman, as I couldn't find another location where all our B2C Commerce API's live. **This repo is exclusively for Solution Engineers at Salesforce to help with their Demo and POC builds.** 
 
