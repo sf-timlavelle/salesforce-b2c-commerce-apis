@@ -26,23 +26,32 @@ All requests require a valid Salesforce Account Manager API Client ID and Secret
 
 A collection-scope variable `baseUrl` points to a collection of environment-scope variables to build your host. More information on managing Postman environments and variables can be found [here](https://learning.postman.com/docs/sending-requests/variables/).
 
-## Required B2C Commerce Variables
+## Postman Environment-scope variables
 
-|Variable  |Default value               |Set in         |Example|
-|----------|----------------------------|---------------|-------|
-|`baseUrl` |-|Collection|https://{{commerce_realmID}}-{{commerce_instanceID}}.{{commerce_sandbox_host}}/s/-/dw/data/v{{commerce_APIVersion}}|
-|`commerce_AM_clientID` |-|Environment|-|
-|`commerce_AM_passwd`|-|Environment|-|
-|`commerce_realmID` |-|Environment|`zzap`|
-|`commerce_instanceID`|-|Environment|`177`|
-|`commerce_SCAPI_shortCode` |-|Environment|-|
-|`commerce_sandbox_host`|-|Environment|`sandbox.us02.dx.commercecloud.salesforce.com`|
-|`commerce_sandbox_accessCode` |-|Environment|-|
+In order for the API's to work, below is the list of required fields before making your first API call
+
+### Manual Variables to enter into the Salesforce Cloud evironment
+
+|Variable  |Set in         |Description|
+|----------|----------------------------|---------------|
+|`commerce_AM_clientID` |Environment|Account Manager Client-ID|
+|`commerce_AM_passwd`|Environment|Account Manager Password, generated in AM|
+|`commerce_realmID` |Environment|`zzap` - Default APAC realm|
+|`commerce_instanceID`|Environment|Your instance ID|
+|`commerce_SCAPI_shortCode` |Environment|Found in Administration => Salesforce Commerce API Settings|
+|`commerce_sandbox_host`|Environment|Your sandbox host: `sandbox.us02.dx.commercecloud.salesforce.com`|
+|`commerce_sandbox_accessCode` |Environment|-|
+|`commerce_sandbox_SiteID`|-Environment|The ID of the site you're working with|
+
+### Dynamically Populated Environment-scope variables
+
+|Variable  |Default value               |Set in         |Description|
+|`baseUrl` |-|-|
 |`commerce_sandbox_Encoded`|-|Environment|-|
 |`commerce_sandbox_encodedTimeStamp` |-|Environment|-|
 |`commerce_sandbox_bearerToken`|-|Environment|-|
 |`commerce_sandbox_expiresIn` |-|Environment|-|
-|`commerce_sandbox_SiteID`|-|Environment|-|
+
 
 ## Pre-Request Scripts
 
