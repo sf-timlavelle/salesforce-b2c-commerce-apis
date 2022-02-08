@@ -49,12 +49,22 @@ More information on managing Postman environments and variables can be found [he
 |`commerce_sandbox_SiteID`|-|Environment|-|
 
 ## Pre-Request Scripts
+
 Inside this collection, there are two Pre-Request scripts which should not be touched as it handles core functionality needed for the APIs to run as smoothly and seemlessly as possible.
 
+#### Base64 Encoded Generation
+
+In order to help automate the Token generation process, I have included the Postman Crypto.js code to build the string required for encoding and then Base64 encode this string to use within the authentication process. 
+
 ### OCAPI Folder Pre-Request Script
-As it is best practice to have different Roles and Permissions for the OCAPI Data and Shop API endpoints, I have configured automatic Token Generation and Automatic Token Refresh generation on this folders Pre-Request Script. 
+
+As it is best practice to have different Roles and Permissions for the OCAPI Data and Shop API endpoints, I have configured **automatic token generation** and **automatic token refresh generation** on this folders Pre-Request Script. 
 
 The Javascript in this folder is ran for every request in the OCAPI folder and checks if the current token is still valid and if it is not, it will generate a new token and store the values in the Environment file. If the current token is valid, it will skip token generation and execute the requested API request. 
+
+### Data && Shop Folder Pre-Request Script
+
+To help with the API request in the Data and Shop Folders, I am dynamically adding two headers into each requests so API calls can be made successfully. In this pre-request script, I am dynamiclly insert `Authorization` and `client_id` headers. 
 
 ### Contribute
 
