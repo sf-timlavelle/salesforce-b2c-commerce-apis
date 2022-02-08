@@ -72,7 +72,7 @@ The Javascript in this folder is ran for every request in the OCAPI folder and c
 
 ### OCAPI > Data & Shop Folder Pre-Request Script
 
-To help with the API request in the Data and Shop Folders, I am dynamically adding two headers into each requests so API calls can be made successfully. In this pre-request script, I am dynamiclly insert `Authorization` and `client_id` headers. 
+To help with the API request in the Data and Shop Folders, I am dynamically adding two headers into each requests so API calls can be made successfully. In this pre-request script, I am dynamiclly inserting `Authorization` and `client_id` headers. 
 
 ## Contribute
 
