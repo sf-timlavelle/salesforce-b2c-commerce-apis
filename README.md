@@ -24,12 +24,7 @@ The collection is arranged in folders according to the API endpoints (OCAPI/SCAP
 
 All requests require a valid Salesforce Account Manager API Client ID and Secret (Password). This should be set in your [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) i.e. outside the collection itself. This should help avoid accidental commits of API keys to repos.
 
-A collection-scope variable `baseUrl` points to a collection of environment-scope variables to build your host.
-
-SparkPost Enterprise customers and SparkPost EU customers can override this in your Postman environment to point to the [appropriate host](https://developers.sparkpost.com/api/index.html#header-api-endpoints).
-For instance, if you are a SparkPost EU customer, you set the Postman environment variable `BASE_URL` to `https://sandbox.us02.dx.commercecloud.salesforce.com`.
-
-More information on managing Postman environments and variables can be found [here](https://learning.postman.com/docs/sending-requests/variables/).
+A collection-scope variable `baseUrl` points to a collection of environment-scope variables to build your host. More information on managing Postman environments and variables can be found [here](https://learning.postman.com/docs/sending-requests/variables/).
 
 ## Required B2C Commerce Variables
 
