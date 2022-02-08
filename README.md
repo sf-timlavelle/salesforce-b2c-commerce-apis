@@ -1,6 +1,8 @@
-# Salesforce B2C Commerce API Postman collection
+# Salesforce B2C Commerce API Postman collection for SE's
 
-Postman Collection demonstrating how to use the [B2C Commerce](https://www.salesforce.com/au/products/commerce-cloud/ecommerce/) REST API.
+I've created this collection by exporting the API-Explorer JSON file and importing into Postman, as I couldn't find another location where all our B2C Commerce API's live. **This repo is exclusively for Solution Engineers at Salesforce to help with their Demo and POC builds.** 
+
+This is a Postman Collection cataloguing how to use the [B2C Commerce](https://www.salesforce.com/au/products/commerce-cloud/ecommerce/) REST API.
 More information about the API can be found on [documentation.b2c.commercecloud.salesforce.com](https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fdata%2FResources%2FCatalogs.html).
 
 ## Installation
@@ -62,13 +64,20 @@ As it is best practice to have different Roles and Permissions for the OCAPI Dat
 
 The Javascript in this folder is ran for every request in the OCAPI folder and checks if the current token is still valid and if it is not, it will generate a new token and store the values in the Environment file. If the current token is valid, it will skip token generation and execute the requested API request. 
 
-### Data && Shop Folder Pre-Request Script
+### Data & Shop Folder Pre-Request Script
 
 To help with the API request in the Data and Shop Folders, I am dynamically adding two headers into each requests so API calls can be made successfully. In this pre-request script, I am dynamiclly insert `Authorization` and `client_id` headers. 
 
-### Contribute
+## Contribute
 
 I welcome your contributions!  Please speak to [Tim Lavelle](@sf-timlavelle) on how to become a contributor to this Collection
 
-### Change Log
+## Change Log
 
+### 1.0 - 8 Feb, 2022
+
+#### Initial Collection Distribution
+
+- Imported OCAPI *21.9* APIs from API Explorer for **Data** and **Shop**
+- Created Environment variables for Salesforce Clouds
+- Created Pre-Request scripts to automate token generation and refresh
