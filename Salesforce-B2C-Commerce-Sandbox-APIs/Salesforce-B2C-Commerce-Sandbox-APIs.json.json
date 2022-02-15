@@ -1510,8 +1510,7 @@
                   },
                   "request": {
                     "auth": {
-                      "type": "oauth2",
-                      "oauth2": {}
+                      "type": "noauth"
                     },
                     "method": "POST",
                     "header": [
@@ -5055,7 +5054,7 @@
   ],
   "variable": [
     {
-      "id": "63b760f1-b2e2-4e15-bf24-b54f821e973d",
+      "id": "8a50c33b-1c7f-4496-a6b5-652c840ed6d7",
       "key": "baseURL",
       "value": "1",
       "type": "string"
