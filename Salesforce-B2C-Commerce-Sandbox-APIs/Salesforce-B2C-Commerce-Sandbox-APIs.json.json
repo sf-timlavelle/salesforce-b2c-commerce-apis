@@ -5079,12 +5079,12 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "b2c09406-a10b-4c3f-8e49-cdc4b99bb048",
+        "id": "9446f522-c7e0-4d13-bbbc-c33c13e0485b",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
           "let tokenTime = pm.variables.replaceIn('{{$timestamp}}');",
-          "let tokenTimestamp = pm.environment.get(\"commerce_sandbox_encodedTimeStamp\");",
+          "let tokenTimestamp = pm.environment.get(\"ccommerce_sandboxMgmt_encodedTimeStamp\");",
           "",
           "// Set default timeout of 15 minutes if no previous call is made",
           "let expiresInTime = pm.environment.get(\"commerce_sandbox_expiresIn\");",
@@ -5117,7 +5117,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "c87e8cd6-7ec3-4adf-8e13-4e63a96d35e0",
+        "id": "728ae1fb-412f-4fea-b523-eee40621d79e",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5127,7 +5127,7 @@
   ],
   "variable": [
     {
-      "id": "00b14949-73fe-4ea1-be67-96a821b22800",
+      "id": "b17f9811-5c59-490f-ba4b-6c50b354a32f",
       "key": "baseURL",
       "value": "1",
       "type": "string"
