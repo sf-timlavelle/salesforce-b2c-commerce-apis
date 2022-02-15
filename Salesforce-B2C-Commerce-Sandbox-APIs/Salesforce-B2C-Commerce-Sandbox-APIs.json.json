@@ -3599,8 +3599,7 @@
               },
               "request": {
                 "auth": {
-                  "type": "oauth2",
-                  "oauth2": {}
+                  "type": "noauth"
                 },
                 "method": "DELETE",
                 "header": [],
@@ -5063,7 +5062,7 @@
   ],
   "variable": [
     {
-      "id": "21e735d0-bbdb-4415-9192-13aa444ed58b",
+      "id": "6da57222-3b2a-4e4f-a694-1dfa1bf4f7f3",
       "key": "baseURL",
       "value": "1",
       "type": "string"
