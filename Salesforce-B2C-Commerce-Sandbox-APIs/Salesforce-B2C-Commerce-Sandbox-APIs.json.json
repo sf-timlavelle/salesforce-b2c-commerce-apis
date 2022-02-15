@@ -5047,12 +5047,22 @@
           },
           {
             "key": "Content-Type",
-            "value": "client_credentials",
+            "value": "application/x-www-form-urlencoded",
             "type": "text"
           }
         ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
         "url": {
-          "raw": "https://account.demandware.com:443/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}&grant_type=urn:demandware:params:oauth:grant-type:client-id:dwsid:dwsecuretoken",
+          "raw": "https://account.demandware.com:443/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
           "protocol": "https",
           "host": [
             "account",
@@ -5073,10 +5083,6 @@
             {
               "key": "client_secret",
               "value": "{{commerce_AM_passwd}}"
-            },
-            {
-              "key": "grant_type",
-              "value": "urn:demandware:params:oauth:grant-type:client-id:dwsid:dwsecuretoken"
             }
           ]
         }
@@ -5146,7 +5152,7 @@
   ],
   "variable": [
     {
-      "id": "123644bd-ef82-4131-98ed-002f3f747672",
+      "id": "ffd58b34-81c9-402c-b194-3cca39ff8f3c",
       "key": "baseURL",
       "value": "1",
       "type": "string"
