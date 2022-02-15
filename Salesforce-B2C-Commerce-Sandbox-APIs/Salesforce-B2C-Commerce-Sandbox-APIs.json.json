@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "94eb3b52-402d-40c2-b75c-639ba9fe266e",
+        "id": "24b94d83-ffc1-402b-aec3-5dba3ff8adf8",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5120,7 +5120,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "88c5b04d-e914-4320-9c14-b7a716b6c1b1",
+        "id": "ca3a13d8-c59e-4ffb-8d06-01a33cd9d600",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5130,8 +5130,8 @@
   ],
   "variable": [
     {
-      "id": "a20f6933-bc45-4533-b453-2ed50965a465",
-      "key": "baseURL",
+      "id": "aa870cac-f664-41c5-b28a-3b633edb68cc",
+      "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
     }
