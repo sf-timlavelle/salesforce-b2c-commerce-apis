@@ -89,6 +89,12 @@ I welcome your contributions!  Please speak to [Tim Lavelle](mailto:timothy.lave
 
 ## Change Log
 
+### 1.2 - 16 Feb, 2022
+
+#### Added Sandbox Management API Collection
+
+- Added the B2C Sandbox Management Collection (Still requires more work into the Authentication as Sandbox requires SSO auth) 
+
 ### 1.1 - 14 Feb, 2022
 
 #### Updated Shop Pre-request script
