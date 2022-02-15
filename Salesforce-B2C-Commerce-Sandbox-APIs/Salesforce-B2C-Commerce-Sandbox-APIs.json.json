@@ -5100,12 +5100,12 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "24b94d83-ffc1-402b-aec3-5dba3ff8adf8",
+        "id": "5192d9e8-7837-4481-b408-7a179308f0df",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
           "let tokenTime = pm.variables.replaceIn('{{$timestamp}}');",
-          "let tokenTimestamp = pm.environment.get(\"ccommerce_sandboxMgmt_encodedTimeStamp\");",
+          "let tokenTimestamp = pm.environment.get(\"commerce_sandboxMgmt_encodedTimeStamp\");",
           "",
           "// Set default timeout of 15 minutes if no previous call is made",
           "let expiresInTime = pm.environment.get(\"commerce_sandboxMgmt_expiresIn\");",
@@ -5141,7 +5141,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "ca3a13d8-c59e-4ffb-8d06-01a33cd9d600",
+        "id": "a4f8f174-3bef-44f8-987e-35d55b5a8b38",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5151,7 +5151,7 @@
   ],
   "variable": [
     {
-      "id": "e388db7a-b82e-491e-8c4f-a273db459866",
+      "id": "7da6c613-e04b-42e3-9df7-07ce523cc2df",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
