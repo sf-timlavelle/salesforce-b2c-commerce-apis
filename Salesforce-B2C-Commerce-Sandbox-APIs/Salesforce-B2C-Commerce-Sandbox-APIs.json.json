@@ -5029,17 +5029,55 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "eadcf8e0-1a8d-4138-be5a-03b08b9552ed",
+        "id": "303f427a-a208-47fa-9b7f-1733eb0642f1",
         "type": "text/javascript",
         "exec": [
-          ""
+          "// Set Environment Variables",
+          "let user = pm.environment.get('salesforce_userName');",
+          "let accessCode = pm.environment.get('commerce_sandbox_accessCode');",
+          "let amPass = pm.environment.get('commerce_AM_passwd');",
+          "let baseString = user + ':' + accessCode + ':' + amPass;",
+          "",
+          "// Encrypt Environment Variables",
+          "let encodedString = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(baseString))",
+          "pm.environment.set('commerce_sandbox_Encoded', encodedString);",
+          "",
+          "// Set base timestamps in Unix time",
+          "let tokenTime = pm.variables.replaceIn('{{$timestamp}}');",
+          "let tokenTimestamp = pm.environment.get(\"commerce_sandbox_encodedTimeStamp\");",
+          "",
+          "// Set default timeout of 15 minutes if no previous call is made",
+          "let expiresInTime = pm.environment.get(\"commerce_sandbox_expiresIn\");",
+          "if(!expiresInTime){",
+          "    expiresInTime = 899; ",
+          "}",
+          "",
+          "// Refresh the OAuth token if necessary",
+          "if((tokenTime - tokenTimestamp) >= expiresInTime) {",
+          "    console.warn(\"We require a new token\")",
+          "    pm.sendRequest({",
+          "        url:  'https://' + pm.environment.get(\"commerce_realmID\") + '-' + pm.environment.get(\"commerce_instanceID\") + '.' + pm.environment.get(\"commerce_sandbox_host\") + '/dw/oauth2/access_token?grant_type=urn:demandware:params:oauth:grant-type:client-id:dwsid:dwsecuretoken&client_id=' + pm.environment.get(\"commerce_AM_clientID\"), ",
+          "        method: 'POST',",
+          "        header: {",
+          "            'Content-Type': 'application/x-www-form-urlencoded',",
+          "            'Authorization': 'Basic ' + pm.environment.get(\"commerce_sandbox_Encoded\")",
+          "        }",
+          "    }, function (err, res) {",
+          "            // Set Authorisation Response Variables",
+          "            pm.environment.set('commerce_sandbox_bearerToken', res.json().access_token);",
+          "            pm.environment.set('commerce_sandbox_encodedTimeStamp', tokenTime);",
+          "            pm.environment.set('commerce_sandbox_expiresIn', res.json().expires_in);",
+          "    });",
+          "} else {",
+          "    console.info(\"Current token is valid\")",
+          "}"
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "e506bc5c-2e56-46a7-ba3f-7e7a1502517d",
+        "id": "71e7cf04-775e-4aab-9094-d431fe08216d",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5049,7 +5087,7 @@
   ],
   "variable": [
     {
-      "id": "3cfe4e98-87ef-4234-a7c7-ecee770a0582",
+      "id": "cbc21b62-af77-42f1-a708-27648360ac02",
       "key": "baseURL",
       "value": "1",
       "type": "string"
