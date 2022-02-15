@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "1193296e-b286-4fac-a5ae-699db331ed88",
+        "id": "1317052c-8bd8-4f08-9cac-03d80a9bdd81",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5104,7 +5104,7 @@
           "        }",
           "    }, function (err, res) {",
           "            // Set Authorisation Response Variables",
-          "            pm.environment.set('commerce_sandbox_bearerToken', res.json().access_token);",
+          "            pm.environment.set('commerce_sandboxMgmt_bearerToken', res.json().access_token);",
           "            pm.environment.set('commerce_sandboxMgmt_encodedTimeStamp', tokenTime);",
           "            pm.environment.set('commerce_sandboxMgmt_expiresIn', res.json().expires_in);",
           "    });",
@@ -5117,7 +5117,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "c69050d6-1ce6-46e0-9dc8-0bdd1133e2e7",
+        "id": "56c3ab52-3ccb-41fc-aab5-e9eda49d85ad",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5127,7 +5127,7 @@
   ],
   "variable": [
     {
-      "id": "5d7a2abd-c4e6-4f3f-93b5-3a72038b0779",
+      "id": "202a1525-3f9b-4c36-9466-55cf8e2abae0",
       "key": "baseURL",
       "value": "1",
       "type": "string"
