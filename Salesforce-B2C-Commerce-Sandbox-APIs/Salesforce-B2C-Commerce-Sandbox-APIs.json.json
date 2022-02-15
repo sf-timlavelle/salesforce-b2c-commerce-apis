@@ -4508,7 +4508,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/sandboxes?include_deleted=true",
+              "raw": "{{baseUrl}}/sandboxes",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -4519,7 +4519,8 @@
                 {
                   "key": "include_deleted",
                   "value": "true",
-                  "description": "If set, return deleted sandboxes."
+                  "description": "If set, return deleted sandboxes.",
+                  "disabled": true
                 }
               ]
             },
@@ -5064,7 +5065,7 @@
   ],
   "variable": [
     {
-      "id": "9860df2a-cd1e-4941-b90a-e286f7b616fd",
+      "id": "a12048e2-0944-4cbe-9180-88b7a23a04f5",
       "key": "baseURL",
       "value": "1",
       "type": "string"
