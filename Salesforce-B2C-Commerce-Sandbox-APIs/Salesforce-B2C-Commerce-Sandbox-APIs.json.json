@@ -5100,7 +5100,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "5192d9e8-7837-4481-b408-7a179308f0df",
+        "id": "b09d4f0e-f786-44da-bdcd-2d49d932c9a0",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5120,7 +5120,7 @@
           "",
           "    console.warn(\"We require a new token\")",
           "    pm.sendRequest({",
-          "        url:  'https://' + pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\") + '&client_secret=' + pm.environment.get(\"commerce_AM_passwd\"),",
+          "        url:  pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\") + '&client_secret=' + pm.environment.get(\"commerce_AM_passwd\"),",
           "        method: 'POST',",
           "        header: {",
           "            'Content-Type': 'application/x-www-form-urlencoded'",
@@ -5141,7 +5141,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "a4f8f174-3bef-44f8-987e-35d55b5a8b38",
+        "id": "5f2b211e-e9b4-43a1-9e7d-7fb429e53ba4",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5151,7 +5151,7 @@
   ],
   "variable": [
     {
-      "id": "7da6c613-e04b-42e3-9df7-07ce523cc2df",
+      "id": "7ce85dbc-8a76-49f2-9b38-8ff5f8f6a7bc",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
