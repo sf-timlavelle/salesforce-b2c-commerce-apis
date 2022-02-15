@@ -4896,7 +4896,29 @@
           ]
         }
       ],
-      "id": "9380de0d-1754-41c7-9438-542f235a1928"
+      "id": "9380de0d-1754-41c7-9438-542f235a1928",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "92d9940a-5c05-4235-8304-05238a12fa8e",
+            "type": "text/javascript",
+            "exec": [
+              "pm.request.headers.add({ key: 'Authorization', value: \"Bearer \" + pm.environment.get(\"commerce_sandbox_bearerToken\") });"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "842d2af8-4f73-493e-8cc0-d405ab1f6989",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Retrieve API information.",
@@ -5130,7 +5152,7 @@
   ],
   "variable": [
     {
-      "id": "aa870cac-f664-41c5-b28a-3b633edb68cc",
+      "id": "bd89e09f-6c0e-4b0c-96a9-1fbeaec0feb9",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
