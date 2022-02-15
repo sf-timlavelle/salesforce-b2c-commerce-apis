@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "8f14e245-0377-4ad9-abc1-baae8ddeb28e",
+        "id": "d4255184-606c-4698-9afb-3c6815c6430d",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5102,7 +5102,7 @@
           "            'Content-Type': 'application/x-www-form-urlencoded'",
           "        },",
           "        body: {",
-          "            ",
+          "            \"grant_type=client_credentials\"",
           "        }",
           "    }, function (err, res) {",
           "            // Set Authorisation Response Variables",
@@ -5119,7 +5119,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "8941dc35-e628-42be-bd43-fc8118356525",
+        "id": "0b491808-18e3-4504-a6e1-7cb8d50f6a5a",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5129,7 +5129,7 @@
   ],
   "variable": [
     {
-      "id": "8213899b-bf0c-4e12-b456-b8d4d1efef27",
+      "id": "d24c8b49-c9ee-4f8e-a5f6-bc4559c31299",
       "key": "baseURL",
       "value": "1",
       "type": "string"
