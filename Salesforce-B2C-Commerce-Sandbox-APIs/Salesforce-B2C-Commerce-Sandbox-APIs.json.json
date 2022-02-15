@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "96e8d12e-f14b-42dc-8154-fbee2cc942f7",
+        "id": "8f14e245-0377-4ad9-abc1-baae8ddeb28e",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5099,8 +5099,10 @@
           "        url:  'https://' + pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\") + '&client_secret=' + pm.environment.get(\"commerce_AM_passwd\"),",
           "        method: 'POST',",
           "        header: {",
-          "            'Content-Type': 'application/x-www-form-urlencoded',",
-          "            'Authorization': 'Basic ' + pm.environment.get(\"commerce_sandbox_Encoded\")",
+          "            'Content-Type': 'application/x-www-form-urlencoded'",
+          "        },",
+          "        body: {",
+          "            ",
           "        }",
           "    }, function (err, res) {",
           "            // Set Authorisation Response Variables",
@@ -5117,7 +5119,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "032bbc7e-724c-4f1a-bad1-d3892706b32e",
+        "id": "8941dc35-e628-42be-bd43-fc8118356525",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5127,7 +5129,7 @@
   ],
   "variable": [
     {
-      "id": "2560c75d-25bf-4a71-b261-5200262f76d7",
+      "id": "8213899b-bf0c-4e12-b456-b8d4d1efef27",
       "key": "baseURL",
       "value": "1",
       "type": "string"
