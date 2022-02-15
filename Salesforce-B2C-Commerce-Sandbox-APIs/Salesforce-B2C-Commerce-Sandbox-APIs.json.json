@@ -3342,8 +3342,7 @@
               },
               "request": {
                 "auth": {
-                  "type": "oauth2",
-                  "oauth2": {}
+                  "type": "noauth"
                 },
                 "method": "PATCH",
                 "header": [
@@ -5064,7 +5063,7 @@
   ],
   "variable": [
     {
-      "id": "7fd744ff-7319-44fc-a553-f7cdb1a6dc77",
+      "id": "21e735d0-bbdb-4415-9192-13aa444ed58b",
       "key": "baseURL",
       "value": "1",
       "type": "string"
