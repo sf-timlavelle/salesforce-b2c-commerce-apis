@@ -13,7 +13,7 @@
           "item": [
             {
               "name": "Show realm configuration.",
-              "_postman_id": "3b1cd8e0-e872-4759-a095-e05013e34d9b",
+              "id": "3b1cd8e0-e872-4759-a095-e05013e34d9b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -39,102 +39,13 @@
                       "id": "19273370-3373-4b0a-93a2-b495c2b6c14b",
                       "key": "realm",
                       "value": "quis ea culpa sunt",
-                      "description": "(Required) The four-letter ID of the realm.",
-                      "type": "string"
+                      "description": "(Required) The four-letter ID of the realm."
                     }
                   ]
                 },
                 "description": "Return the current configuration values of the realm."
               },
               "response": [
-                {
-                  "id": "1a1a3fc1-b0fe-4199-b0fb-14df5354ef0d",
-                  "name": "There isn't any realm with that ID.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/realms/:realm/configuration",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "realms",
-                        ":realm",
-                        "configuration"
-                      ],
-                      "variable": [
-                        {
-                          "key": "realm",
-                          "value": "quis ea culpa sunt",
-                          "description": "(Required) The four-letter ID of the realm."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Not Found",
-                  "code": 404,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
-                {
-                  "id": "8ca793e8-547c-4c6c-9b3a-331bab989e49",
-                  "name": "The user doesn't have access to that realm.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/realms/:realm/configuration",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "realms",
-                        ":realm",
-                        "configuration"
-                      ],
-                      "variable": [
-                        {
-                          "key": "realm",
-                          "value": "quis ea culpa sunt",
-                          "description": "(Required) The four-letter ID of the realm."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Forbidden",
-                  "code": 403,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
                 {
                   "id": "c4fa7496-563e-4867-a39d-dcab343e7fae",
                   "name": "Current configuration values of the realm.",
@@ -222,12 +133,100 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "8ca793e8-547c-4c6c-9b3a-331bab989e49",
+                  "name": "The user doesn't have access to that realm.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/realms/:realm/configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "realms",
+                        ":realm",
+                        "configuration"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realm",
+                          "value": "quis ea culpa sunt",
+                          "description": "(Required) The four-letter ID of the realm."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "1a1a3fc1-b0fe-4199-b0fb-14df5354ef0d",
+                  "name": "There isn't any realm with that ID.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/realms/:realm/configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "realms",
+                        ":realm",
+                        "configuration"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realm",
+                          "value": "quis ea culpa sunt",
+                          "description": "(Required) The four-letter ID of the realm."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 }
               ]
             },
             {
               "name": "Update realm configuration.",
-              "_postman_id": "b60dbb68-9303-4eb7-8d3e-8cd85f54d228",
+              "id": "b60dbb68-9303-4eb7-8d3e-8cd85f54d228",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -267,8 +266,7 @@
                       "id": "18675fb6-336d-4fb1-ab35-141447c2c69d",
                       "key": "realm",
                       "value": "quis ea culpa sunt",
-                      "description": "(Required) The four-letter ID of the realm.",
-                      "type": "string"
+                      "description": "(Required) The four-letter ID of the realm."
                     }
                   ]
                 },
@@ -276,8 +274,8 @@
               },
               "response": [
                 {
-                  "id": "75e101a4-d199-400f-b81f-cdbcb8cf8bd6",
-                  "name": "The user doesn't have access to that realm.",
+                  "id": "8856f78a-8a03-4b08-8aad-4cc00dbdf384",
+                  "name": "Updated realm configuration data.",
                   "originalRequest": {
                     "method": "PATCH",
                     "header": [
@@ -315,8 +313,8 @@
                       ]
                     }
                   },
-                  "status": "Forbidden",
-                  "code": 403,
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -326,7 +324,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                  "body": "{\n \"kind\": \"RealmUsage\",\n \"code\": 96079607,\n \"status\": \"Failure\",\n \"data\": {\n  \"sandbox\": {\n   \"limitsEnabled\": true,\n   \"totalNumberOfSandboxes\": 50,\n   \"sandboxTTL\": {\n    \"maximum\": 240,\n    \"defaultValue\": 8\n   },\n   \"localUsersAllowed\": false\n  },\n  \"requests\": {\n   \"enforced\": true,\n   \"maxRate\": 50000,\n   \"timePeriod\": 60\n  },\n  \"startScheduler\": {\n   \"weekdays\": [\n    \"THURSDAY\",\n    \"FRIDAY\"\n   ],\n   \"time\": \"20:10:00Z\"\n  },\n  \"stopScheduler\": {\n   \"weekdays\": [\n    \"SATURDAY\",\n    \"TUESDAY\"\n   ],\n   \"time\": \"20:10:00Z\"\n  }\n }\n}"
                 },
                 {
                   "id": "7630cd37-9109-4e5e-affb-f88a512ce2be",
@@ -382,59 +380,6 @@
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 },
                 {
-                  "id": "8856f78a-8a03-4b08-8aad-4cc00dbdf384",
-                  "name": "Updated realm configuration data.",
-                  "originalRequest": {
-                    "method": "PATCH",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"sandbox\": {\n        \"sandboxTTL\": {\n            \"maximum\": 240,\n            \"defaultValue\": 24\n        },\n        \"stopScheduler\": {\n            \"weekdays\": [\n                \"MONDAY\",\n                \"TUESDAY\",\n                \"WEDNESDAY\",\n                \"THURSDAY\",\n                \"FRIDAY\"\n            ],\n            \"time\": \"19:00:00Z\"\n        },\n        \"startScheduler\": {\n            \"weekdays\": [\n                \"MONDAY\",\n                \"TUESDAY\",\n                \"WEDNESDAY\",\n                \"THURSDAY\",\n                \"FRIDAY\"\n            ],\n            \"time\": \"08:00:00+03:00\"\n        }\n    }\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": {
-                      "raw": "{{baseUrl}}/realms/:realm/configuration",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "realms",
-                        ":realm",
-                        "configuration"
-                      ],
-                      "variable": [
-                        {
-                          "key": "realm",
-                          "value": "quis ea culpa sunt",
-                          "description": "(Required) The four-letter ID of the realm."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"RealmUsage\",\n \"code\": 96079607,\n \"status\": \"Failure\",\n \"data\": {\n  \"sandbox\": {\n   \"limitsEnabled\": true,\n   \"totalNumberOfSandboxes\": 50,\n   \"sandboxTTL\": {\n    \"maximum\": 240,\n    \"defaultValue\": 8\n   },\n   \"localUsersAllowed\": false\n  },\n  \"requests\": {\n   \"enforced\": true,\n   \"maxRate\": 50000,\n   \"timePeriod\": 60\n  },\n  \"startScheduler\": {\n   \"weekdays\": [\n    \"THURSDAY\",\n    \"FRIDAY\"\n   ],\n   \"time\": \"20:10:00Z\"\n  },\n  \"stopScheduler\": {\n   \"weekdays\": [\n    \"SATURDAY\",\n    \"TUESDAY\"\n   ],\n   \"time\": \"20:10:00Z\"\n  }\n }\n}"
-                },
-                {
                   "id": "d3873c39-a2a9-4974-b040-7e267b7e7b31",
                   "name": "The user isn't authenticated.",
                   "originalRequest": {
@@ -476,6 +421,59 @@
                   },
                   "status": "Unauthorized",
                   "code": 401,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "75e101a4-d199-400f-b81f-cdbcb8cf8bd6",
+                  "name": "The user doesn't have access to that realm.",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"sandbox\": {\n        \"sandboxTTL\": {\n            \"maximum\": 240,\n            \"defaultValue\": 24\n        },\n        \"stopScheduler\": {\n            \"weekdays\": [\n                \"MONDAY\",\n                \"TUESDAY\",\n                \"WEDNESDAY\",\n                \"THURSDAY\",\n                \"FRIDAY\"\n            ],\n            \"time\": \"19:00:00Z\"\n        },\n        \"startScheduler\": {\n            \"weekdays\": [\n                \"MONDAY\",\n                \"TUESDAY\",\n                \"WEDNESDAY\",\n                \"THURSDAY\",\n                \"FRIDAY\"\n            ],\n            \"time\": \"08:00:00+03:00\"\n        }\n    }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/realms/:realm/configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "realms",
+                        ":realm",
+                        "configuration"
+                      ],
+                      "variable": [
+                        {
+                          "key": "realm",
+                          "value": "quis ea culpa sunt",
+                          "description": "(Required) The four-letter ID of the realm."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -543,12 +541,11 @@
               ]
             }
           ],
-          "_postman_id": "9a8de0c7-a786-41df-b8d0-c27a4e8c2100",
-          "_postman_isSubFolder": true
+          "id": "9a8de0c7-a786-41df-b8d0-c27a4e8c2100"
         },
         {
           "name": "Show realm information.",
-          "_postman_id": "82e96eec-32d2-4f1a-bee0-578bfdcbcaec",
+          "id": "82e96eec-32d2-4f1a-bee0-578bfdcbcaec",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -580,8 +577,7 @@
                   "id": "d1bd4ac9-5637-49fd-9f5f-037fbbeaf698",
                   "key": "realm",
                   "value": "quis ea culpa sunt",
-                  "description": "(Required) The four-letter ID of the realm.",
-                  "type": "string"
+                  "description": "(Required) The four-letter ID of the realm."
                 }
               ]
             },
@@ -589,8 +585,8 @@
           },
           "response": [
             {
-              "id": "055e843e-a9e0-44d9-ba4a-7ba19bf20b23",
-              "name": "There isn't any realm with that ID.",
+              "id": "42769790-7a04-401e-bf84-37ae3ae04925",
+              "name": "Realm metadata.",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -624,8 +620,106 @@
                   ]
                 }
               },
-              "status": "Not Found",
-              "code": 404,
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"ApiVersion\",\n \"code\": 14229869,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"dolor ea\",\n  \"name\": \"sed ea laborum\",\n  \"enabled\": true,\n  \"usage\": {\n   \"activeSandboxes\": 42\n  },\n  \"configuration\": {\n   \"sandbox\": {\n    \"limitsEnabled\": true,\n    \"totalNumberOfSandboxes\": 50,\n    \"sandboxTTL\": {\n     \"maximum\": 240,\n     \"defaultValue\": 8\n    },\n    \"localUsersAllowed\": false\n   },\n   \"requests\": {\n    \"enforced\": true,\n    \"maxRate\": 50000,\n    \"timePeriod\": 60\n   },\n   \"startScheduler\": {\n    \"weekdays\": [\n     \"WEDNESDAY\",\n     \"SATURDAY\"\n    ],\n    \"time\": \"20:10:00Z\"\n   },\n   \"stopScheduler\": {\n    \"weekdays\": [\n     \"SUNDAY\",\n     \"MONDAY\"\n    ],\n    \"time\": \"20:10:00Z\"\n   }\n  }\n }\n}"
+            },
+            {
+              "id": "2e6b72ef-00d1-4ea8-991c-158f363da082",
+              "name": "The ID is not a valid realm ID.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/realms/:realm?expand=configuration,configuration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "realms",
+                    ":realm"
+                  ],
+                  "query": [
+                    {
+                      "key": "expand",
+                      "value": "configuration,configuration"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "realm",
+                      "value": "quis ea culpa sunt",
+                      "description": "(Required) The four-letter ID of the realm."
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+            },
+            {
+              "id": "6b5cbce1-856c-4d3f-9741-2593c66bf092",
+              "name": "The user isn't authenticated.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/realms/:realm?expand=configuration,configuration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "realms",
+                    ":realm"
+                  ],
+                  "query": [
+                    {
+                      "key": "expand",
+                      "value": "configuration,configuration"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "realm",
+                      "value": "quis ea culpa sunt",
+                      "description": "(Required) The four-letter ID of the realm."
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -687,8 +781,8 @@
               "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
             },
             {
-              "id": "2e6b72ef-00d1-4ea8-991c-158f363da082",
-              "name": "The ID is not a valid realm ID.",
+              "id": "055e843e-a9e0-44d9-ba4a-7ba19bf20b23",
+              "name": "There isn't any realm with that ID.",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -722,106 +816,8 @@
                   ]
                 }
               },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-            },
-            {
-              "id": "42769790-7a04-401e-bf84-37ae3ae04925",
-              "name": "Realm metadata.",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/realms/:realm?expand=configuration,configuration",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "realms",
-                    ":realm"
-                  ],
-                  "query": [
-                    {
-                      "key": "expand",
-                      "value": "configuration,configuration"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "realm",
-                      "value": "quis ea culpa sunt",
-                      "description": "(Required) The four-letter ID of the realm."
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"ApiVersion\",\n \"code\": 14229869,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"dolor ea\",\n  \"name\": \"sed ea laborum\",\n  \"enabled\": true,\n  \"usage\": {\n   \"activeSandboxes\": 42\n  },\n  \"configuration\": {\n   \"sandbox\": {\n    \"limitsEnabled\": true,\n    \"totalNumberOfSandboxes\": 50,\n    \"sandboxTTL\": {\n     \"maximum\": 240,\n     \"defaultValue\": 8\n    },\n    \"localUsersAllowed\": false\n   },\n   \"requests\": {\n    \"enforced\": true,\n    \"maxRate\": 50000,\n    \"timePeriod\": 60\n   },\n   \"startScheduler\": {\n    \"weekdays\": [\n     \"WEDNESDAY\",\n     \"SATURDAY\"\n    ],\n    \"time\": \"20:10:00Z\"\n   },\n   \"stopScheduler\": {\n    \"weekdays\": [\n     \"SUNDAY\",\n     \"MONDAY\"\n    ],\n    \"time\": \"20:10:00Z\"\n   }\n  }\n }\n}"
-            },
-            {
-              "id": "6b5cbce1-856c-4d3f-9741-2593c66bf092",
-              "name": "The user isn't authenticated.",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/realms/:realm?expand=configuration,configuration",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "realms",
-                    ":realm"
-                  ],
-                  "query": [
-                    {
-                      "key": "expand",
-                      "value": "configuration,configuration"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "realm",
-                      "value": "quis ea culpa sunt",
-                      "description": "(Required) The four-letter ID of the realm."
-                    }
-                  ]
-                }
-              },
-              "status": "Unauthorized",
-              "code": 401,
+              "status": "Not Found",
+              "code": 404,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -837,7 +833,7 @@
         },
         {
           "name": "Show usage information for realm.",
-          "_postman_id": "4c6eb836-32ac-4004-89a7-2e686c23a06f",
+          "id": "4c6eb836-32ac-4004-89a7-2e686c23a06f",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -875,8 +871,7 @@
                   "id": "fea1663e-3357-4a8f-991f-6457919b7630",
                   "key": "realm",
                   "value": "quis ea culpa sunt",
-                  "description": "(Required) The four-letter ID of the realm.",
-                  "type": "string"
+                  "description": "(Required) The four-letter ID of the realm."
                 }
               ]
             },
@@ -884,8 +879,8 @@
           },
           "response": [
             {
-              "id": "0664ad36-e08a-47ec-bd85-e733182d67e5",
-              "name": "There isn't any realm with that ID.",
+              "id": "ef94547a-c526-4107-9d41-5605bd4fef9f",
+              "name": "Realm's usage information.",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -924,8 +919,8 @@
                   ]
                 }
               },
-              "status": "Not Found",
-              "code": 404,
+              "status": "OK",
+              "code": 200,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -935,7 +930,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+              "body": "{\n \"kind\": \"Realm\",\n \"code\": 85557643,\n \"status\": \"Failure\",\n \"data\": {\n  \"id\": \"aliquip aliqua incididunt\",\n  \"createdSandboxes\": 93,\n  \"activeSandboxes\": 128,\n  \"deletedSandboxes\": 86,\n  \"sandboxSeconds\": 360000,\n  \"minutesUpByProfile\": [\n   {\n    \"profile\": \"large\",\n    \"minutes\": 31813465\n   },\n   {\n    \"profile\": \"large\",\n    \"minutes\": -51417219\n   }\n  ],\n  \"minutesUp\": 360000,\n  \"minutesDown\": 180000\n }\n}"
             },
             {
               "id": "58af44ba-ee0b-40ad-a9ac-6af35f15aa03",
@@ -1046,8 +1041,8 @@
               "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
             },
             {
-              "id": "ef94547a-c526-4107-9d41-5605bd4fef9f",
-              "name": "Realm's usage information.",
+              "id": "0664ad36-e08a-47ec-bd85-e733182d67e5",
+              "name": "There isn't any realm with that ID.",
               "originalRequest": {
                 "method": "GET",
                 "header": [
@@ -1086,8 +1081,8 @@
                   ]
                 }
               },
-              "status": "OK",
-              "code": 200,
+              "status": "Not Found",
+              "code": 404,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -1097,12 +1092,12 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n \"kind\": \"Realm\",\n \"code\": 85557643,\n \"status\": \"Failure\",\n \"data\": {\n  \"id\": \"aliquip aliqua incididunt\",\n  \"createdSandboxes\": 93,\n  \"activeSandboxes\": 128,\n  \"deletedSandboxes\": 86,\n  \"sandboxSeconds\": 360000,\n  \"minutesUpByProfile\": [\n   {\n    \"profile\": \"large\",\n    \"minutes\": 31813465\n   },\n   {\n    \"profile\": \"large\",\n    \"minutes\": -51417219\n   }\n  ],\n  \"minutesUp\": 360000,\n  \"minutesDown\": 180000\n }\n}"
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
             }
           ]
         }
       ],
-      "_postman_id": "bf72ccaa-3db0-4acf-884a-b98ac628940c"
+      "id": "bf72ccaa-3db0-4acf-884a-b98ac628940c"
     },
     {
       "name": "sandboxes",
@@ -1118,7 +1113,7 @@
                   "item": [
                     {
                       "name": "Read Alias configuration",
-                      "_postman_id": "52453f92-7ff3-4e2c-b379-8d71fe6d29b3",
+                      "id": "52453f92-7ff3-4e2c-b379-8d71fe6d29b3",
                       "protocolProfileBehavior": {
                         "disableBodyPruning": true
                       },
@@ -1145,71 +1140,19 @@
                               "id": "15e08847-c2ac-4e79-ae49-d6c6bb556a66",
                               "key": "sandboxId",
                               "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID.",
-                              "type": "string"
+                              "description": "(Required) The sandbox UUID."
                             },
                             {
                               "id": "9b8cdac8-650a-4ff4-9ab2-c15f71add539",
                               "key": "sandboxAliasId",
                               "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox alias UUID.",
-                              "type": "string"
+                              "description": "(Required) The sandbox alias UUID."
                             }
                           ]
                         },
                         "description": "Retrieves a dedicated alias for the sandbox. Can be called without authentication to get cookie values for the alias."
                       },
                       "response": [
-                        {
-                          "id": "3f64f2b6-bc0c-44ad-8c9d-f8de9aa1a75f",
-                          "name": "There isn't any sandbox or any alias with that ID.",
-                          "originalRequest": {
-                            "method": "GET",
-                            "header": [
-                              {
-                                "description": "Added as a part of security scheme: oauth2",
-                                "key": "Authorization",
-                                "value": "<token>"
-                              }
-                            ],
-                            "url": {
-                              "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases/:sandboxAliasId",
-                              "host": [
-                                "{{baseUrl}}"
-                              ],
-                              "path": [
-                                "sandboxes",
-                                ":sandboxId",
-                                "aliases",
-                                ":sandboxAliasId"
-                              ],
-                              "variable": [
-                                {
-                                  "key": "sandboxId",
-                                  "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                                  "description": "(Required) The sandbox UUID."
-                                },
-                                {
-                                  "key": "sandboxAliasId",
-                                  "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                                  "description": "(Required) The sandbox alias UUID."
-                                }
-                              ]
-                            }
-                          },
-                          "status": "Not Found",
-                          "code": 404,
-                          "_postman_previewlanguage": "json",
-                          "header": [
-                            {
-                              "key": "Content-Type",
-                              "value": "application/json"
-                            }
-                          ],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                        },
                         {
                           "id": "76140e93-f2d3-4f0a-8c4b-6b152d3b81b6",
                           "name": "The Alias configuration.",
@@ -1309,58 +1252,12 @@
                           "cookie": [],
                           "responseTime": null,
                           "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Delete Alias configuration",
-                      "_postman_id": "fe21a07c-7ef3-42e8-a8f5-b5128419a30d",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
-                      "request": {
-                        "auth": {
-                          "type": "oauth2",
-                          "oauth2": {}
                         },
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases/:sandboxAliasId",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "sandboxes",
-                            ":sandboxId",
-                            "aliases",
-                            ":sandboxAliasId"
-                          ],
-                          "variable": [
-                            {
-                              "id": "ae633e6f-7e52-49d5-9522-087633e9facb",
-                              "key": "sandboxId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID.",
-                              "type": "string"
-                            },
-                            {
-                              "id": "f6b96ad5-709d-4304-83c5-9a5e7911761c",
-                              "key": "sandboxAliasId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox alias UUID.",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "description": "Deletes a dedicated alias configuration for a sandbox."
-                      },
-                      "response": [
                         {
-                          "id": "171a7469-2118-4762-9239-ada928ed2fcb",
+                          "id": "3f64f2b6-bc0c-44ad-8c9d-f8de9aa1a75f",
                           "name": "There isn't any sandbox or any alias with that ID.",
                           "originalRequest": {
-                            "method": "DELETE",
+                            "method": "GET",
                             "header": [
                               {
                                 "description": "Added as a part of security scheme: oauth2",
@@ -1405,6 +1302,100 @@
                           "cookie": [],
                           "responseTime": null,
                           "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Delete Alias configuration",
+                      "id": "fe21a07c-7ef3-42e8-a8f5-b5128419a30d",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "auth": {
+                          "type": "oauth2",
+                          "oauth2": {}
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases/:sandboxAliasId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "sandboxes",
+                            ":sandboxId",
+                            "aliases",
+                            ":sandboxAliasId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "ae633e6f-7e52-49d5-9522-087633e9facb",
+                              "key": "sandboxId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox UUID."
+                            },
+                            {
+                              "id": "f6b96ad5-709d-4304-83c5-9a5e7911761c",
+                              "key": "sandboxAliasId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox alias UUID."
+                            }
+                          ]
+                        },
+                        "description": "Deletes a dedicated alias configuration for a sandbox."
+                      },
+                      "response": [
+                        {
+                          "id": "816ca49a-b9e4-4bee-a248-5f3ddb4e0bda",
+                          "name": "Shows, that alias currently gets deleted.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases/:sandboxAliasId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "sandboxes",
+                                ":sandboxId",
+                                "aliases",
+                                ":sandboxAliasId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sandboxId",
+                                  "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                                  "description": "(Required) The sandbox UUID."
+                                },
+                                {
+                                  "key": "sandboxAliasId",
+                                  "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                                  "description": "(Required) The sandbox alias UUID."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Accepted",
+                          "code": 202,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 18083913,\n \"status\": \"Failure\"\n}"
                         },
                         {
                           "id": "26a6e477-f0e9-4e6f-a033-55f81653fc13",
@@ -1457,8 +1448,8 @@
                           "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                         },
                         {
-                          "id": "816ca49a-b9e4-4bee-a248-5f3ddb4e0bda",
-                          "name": "Shows, that alias currently gets deleted.",
+                          "id": "171a7469-2118-4762-9239-ada928ed2fcb",
+                          "name": "There isn't any sandbox or any alias with that ID.",
                           "originalRequest": {
                             "method": "DELETE",
                             "header": [
@@ -1493,8 +1484,8 @@
                               ]
                             }
                           },
-                          "status": "Accepted",
-                          "code": 202,
+                          "status": "Not Found",
+                          "code": 404,
                           "_postman_previewlanguage": "json",
                           "header": [
                             {
@@ -1504,17 +1495,16 @@
                           ],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 18083913,\n \"status\": \"Failure\"\n}"
+                          "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                         }
                       ]
                     }
                   ],
-                  "_postman_id": "bf8c6059-5c6e-4a11-b717-0f99d6c1bb3d",
-                  "_postman_isSubFolder": true
+                  "id": "bf8c6059-5c6e-4a11-b717-0f99d6c1bb3d"
                 },
                 {
                   "name": "Create sandbox alias.",
-                  "_postman_id": "3a268893-5801-4bd5-8f1c-9449e590a5bf",
+                  "id": "3a268893-5801-4bd5-8f1c-9449e590a5bf",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -1554,8 +1544,7 @@
                           "id": "7e825064-961b-4b56-8820-30d32406d38b",
                           "key": "sandboxId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID.",
-                          "type": "string"
+                          "description": "(Required) The sandbox UUID."
                         }
                       ]
                     },
@@ -1616,8 +1605,8 @@
                       "body": "{\n \"kind\": \"SandboxOperationList\",\n \"code\": 23509812,\n \"status\": \"Failure\",\n \"data\": {\n  \"name\": \"www.example.com\",\n  \"id\": \"urn:uuid:194de6f9-85a5-8e8e-ce20-63c4badd4211\",\n  \"unique\": true,\n  \"sandboxId\": \"urn:uuid:790e71e4-2fd8-a1f2-ace7-f47c7c84a9ad\",\n  \"cookie\": {\n   \"name\": \"ad exercitation \",\n   \"value\": \"culpa deserunt est ullamco ess\",\n   \"path\": \"reprehenderit\",\n   \"domain\": \"Duis dolor laboris\"\n  },\n  \"registration\": \"velit mollit ad\",\n  \"domainVerificationRecord\": \"mollit ut\",\n  \"status\": \"pending\"\n }\n}"
                     },
                     {
-                      "id": "839a08fe-fd32-4080-a237-f35575c9327d",
-                      "name": "The user doesn't have access to the sandbox.",
+                      "id": "b69fa8d1-97c6-49ff-bd9a-3ea7a99eed39",
+                      "name": "The alias has been created.",
                       "originalRequest": {
                         "method": "POST",
                         "header": [
@@ -1655,8 +1644,8 @@
                           ]
                         }
                       },
-                      "status": "Forbidden",
-                      "code": 403,
+                      "status": "Created",
+                      "code": 201,
                       "_postman_previewlanguage": "json",
                       "header": [
                         {
@@ -1666,7 +1655,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                      "body": "{\n \"kind\": \"SandboxOperationList\",\n \"code\": 23509812,\n \"status\": \"Failure\",\n \"data\": {\n  \"name\": \"www.example.com\",\n  \"id\": \"urn:uuid:194de6f9-85a5-8e8e-ce20-63c4badd4211\",\n  \"unique\": true,\n  \"sandboxId\": \"urn:uuid:790e71e4-2fd8-a1f2-ace7-f47c7c84a9ad\",\n  \"cookie\": {\n   \"name\": \"ad exercitation \",\n   \"value\": \"culpa deserunt est ullamco ess\",\n   \"path\": \"reprehenderit\",\n   \"domain\": \"Duis dolor laboris\"\n  },\n  \"registration\": \"velit mollit ad\",\n  \"domainVerificationRecord\": \"mollit ut\",\n  \"status\": \"pending\"\n }\n}"
                     },
                     {
                       "id": "8ac70800-27b2-46c9-bd11-e40ca00dcb84",
@@ -1710,6 +1699,59 @@
                       },
                       "status": "Bad Request",
                       "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                    },
+                    {
+                      "id": "839a08fe-fd32-4080-a237-f35575c9327d",
+                      "name": "The user doesn't have access to the sandbox.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"www.example.com\",\n    \"unique\": true\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "sandboxes",
+                            ":sandboxId",
+                            "aliases"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sandboxId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox UUID."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
                       "_postman_previewlanguage": "json",
                       "header": [
                         {
@@ -1773,65 +1815,12 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                    },
-                    {
-                      "id": "b69fa8d1-97c6-49ff-bd9a-3ea7a99eed39",
-                      "name": "The alias has been created.",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "description": "Added as a part of security scheme: oauth2",
-                            "key": "Authorization",
-                            "value": "<token>"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"name\": \"www.example.com\",\n    \"unique\": true\n}",
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "sandboxes",
-                            ":sandboxId",
-                            "aliases"
-                          ],
-                          "variable": [
-                            {
-                              "key": "sandboxId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID."
-                            }
-                          ]
-                        }
-                      },
-                      "status": "Created",
-                      "code": 201,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxOperationList\",\n \"code\": 23509812,\n \"status\": \"Failure\",\n \"data\": {\n  \"name\": \"www.example.com\",\n  \"id\": \"urn:uuid:194de6f9-85a5-8e8e-ce20-63c4badd4211\",\n  \"unique\": true,\n  \"sandboxId\": \"urn:uuid:790e71e4-2fd8-a1f2-ace7-f47c7c84a9ad\",\n  \"cookie\": {\n   \"name\": \"ad exercitation \",\n   \"value\": \"culpa deserunt est ullamco ess\",\n   \"path\": \"reprehenderit\",\n   \"domain\": \"Duis dolor laboris\"\n  },\n  \"registration\": \"velit mollit ad\",\n  \"domainVerificationRecord\": \"mollit ut\",\n  \"status\": \"pending\"\n }\n}"
                     }
                   ]
                 },
                 {
                   "name": "Read all sandbox aliases",
-                  "_postman_id": "4869f082-1951-44ee-ab8d-f90de8ade6bc",
+                  "id": "4869f082-1951-44ee-ab8d-f90de8ade6bc",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -1857,58 +1846,13 @@
                           "id": "c35cc851-0495-4aef-bcda-6d5e573eef5e",
                           "key": "sandboxId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID.",
-                          "type": "string"
+                          "description": "(Required) The sandbox UUID."
                         }
                       ]
                     },
                     "description": "Retrieve a list of all past and present operations on a sandbox within the realm."
                   },
                   "response": [
-                    {
-                      "id": "0dc1e037-3982-4279-b447-9e2a1dc58b85",
-                      "name": "The user doesn't have access to the realm or sandbox.",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "description": "Added as a part of security scheme: oauth2",
-                            "key": "Authorization",
-                            "value": "<token>"
-                          }
-                        ],
-                        "url": {
-                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "sandboxes",
-                            ":sandboxId",
-                            "aliases"
-                          ],
-                          "variable": [
-                            {
-                              "key": "sandboxId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID."
-                            }
-                          ]
-                        }
-                      },
-                      "status": "Forbidden",
-                      "code": 403,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                    },
                     {
                       "id": "36a9298d-0e3b-444f-90eb-78db6eb74983",
                       "name": "List of Alias configurations.",
@@ -1952,6 +1896,50 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 15988883,\n \"status\": \"Failure\",\n \"data\": [\n  {\n   \"name\": \"www.example.com\",\n   \"id\": \"7cfd8ea2-d2d0-221c-00e3-ab71ba03e81a\",\n   \"unique\": true,\n   \"sandboxId\": \"urn:uuid:13925574-be49-c5a9-bb21-9d25367dd525\",\n   \"cookie\": {\n    \"name\": \"incididunt non eiusmod\",\n    \"value\": \"aute Lorem in sit\",\n    \"path\": \"amet reprehenderit sit labore laborum\",\n    \"domain\": \"Duis eiusmod\"\n   },\n   \"registration\": \"ipsum dolore non\",\n   \"domainVerificationRecord\": \"incididunt id sed in\",\n   \"status\": \"pending\"\n  },\n  {\n   \"name\": \"www.example.com\",\n   \"id\": \"urn:uuid:0aef0b9a-4c5a-c642-9027-801fa7a8afb0\",\n   \"unique\": true,\n   \"sandboxId\": \"58154031-3aee-ade9-fa64-a6f65ee83960\",\n   \"cookie\": {\n    \"name\": \"sit in aliquip fugiat\",\n    \"value\": \"sed voluptate fugiat culpa\",\n    \"path\": \"ad Ut\",\n    \"domain\": \"nostrud tempor Duis\"\n   },\n   \"registration\": \"enim eu eiusmod\",\n   \"domainVerificationRecord\": \"non ea incididunt voluptate\",\n   \"status\": \"verified\"\n  }\n ]\n}"
+                    },
+                    {
+                      "id": "0dc1e037-3982-4279-b447-9e2a1dc58b85",
+                      "name": "The user doesn't have access to the realm or sandbox.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/aliases",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "sandboxes",
+                            ":sandboxId",
+                            "aliases"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sandboxId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox UUID."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                     },
                     {
                       "id": "5b782972-c195-4d09-93ba-f8c622561411",
@@ -2000,15 +1988,14 @@
                   ]
                 }
               ],
-              "_postman_id": "586a8ad0-319a-48be-839b-b53d55d0fdd1",
-              "_postman_isSubFolder": true
+              "id": "586a8ad0-319a-48be-839b-b53d55d0fdd1"
             },
             {
               "name": "operations",
               "item": [
                 {
                   "name": "Run sandbox operation.",
-                  "_postman_id": "8ac9413a-abfd-4e0b-b928-462b1b6c22e8",
+                  "id": "8ac9413a-abfd-4e0b-b928-462b1b6c22e8",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -2048,14 +2035,66 @@
                           "id": "74eae067-2939-4425-a06b-bb1e6e19371e",
                           "key": "sandboxId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID.",
-                          "type": "string"
+                          "description": "(Required) The sandbox UUID."
                         }
                       ]
                     },
                     "description": "Request an operation on a sandbox within the realm."
                   },
                   "response": [
+                    {
+                      "id": "f7eeadbd-c3be-4f39-b1d6-99d92807b4e2",
+                      "name": "The operation has been accepted.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"operation\": \"reset\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/operations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "sandboxes",
+                            ":sandboxId",
+                            "operations"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sandboxId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox UUID."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n \"kind\": \"Status\",\n \"code\": -60043279,\n \"status\": \"Failure\",\n \"data\": {\n  \"id\": \"sint veniam\",\n  \"operation\": \"start\",\n  \"operationState\": \"pending\",\n  \"createdAt\": \"1947-03-13T15:20:28.309Z\",\n  \"sandboxState\": \"creating\",\n  \"status\": \"success\"\n }\n}"
+                    },
                     {
                       "id": "646f8c89-1726-4e0d-a3cc-ad6e12ac329e",
                       "name": "The request parameters are invalid (bad request).",
@@ -2098,59 +2137,6 @@
                       },
                       "status": "Bad Request",
                       "code": 400,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                    },
-                    {
-                      "id": "75bdcb60-92a2-42d2-b841-b8349a658a65",
-                      "name": "There were server errors during the operation.",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "description": "Added as a part of security scheme: oauth2",
-                            "key": "Authorization",
-                            "value": "<token>"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"operation\": \"reset\"\n}",
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/operations",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "sandboxes",
-                            ":sandboxId",
-                            "operations"
-                          ],
-                          "variable": [
-                            {
-                              "key": "sandboxId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID."
-                            }
-                          ]
-                        }
-                      },
-                      "status": "Internal Server Error",
-                      "code": 500,
                       "_postman_previewlanguage": "json",
                       "header": [
                         {
@@ -2269,59 +2255,6 @@
                       "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                     },
                     {
-                      "id": "f7eeadbd-c3be-4f39-b1d6-99d92807b4e2",
-                      "name": "The operation has been accepted.",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "description": "Added as a part of security scheme: oauth2",
-                            "key": "Authorization",
-                            "value": "<token>"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"operation\": \"reset\"\n}",
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/operations",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "sandboxes",
-                            ":sandboxId",
-                            "operations"
-                          ],
-                          "variable": [
-                            {
-                              "key": "sandboxId",
-                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                              "description": "(Required) The sandbox UUID."
-                            }
-                          ]
-                        }
-                      },
-                      "status": "Accepted",
-                      "code": 202,
-                      "_postman_previewlanguage": "json",
-                      "header": [
-                        {
-                          "key": "Content-Type",
-                          "value": "application/json"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n \"kind\": \"Status\",\n \"code\": -60043279,\n \"status\": \"Failure\",\n \"data\": {\n  \"id\": \"sint veniam\",\n  \"operation\": \"start\",\n  \"operationState\": \"pending\",\n  \"createdAt\": \"1947-03-13T15:20:28.309Z\",\n  \"sandboxState\": \"creating\",\n  \"status\": \"success\"\n }\n}"
-                    },
-                    {
                       "id": "f98a0cd8-3b91-48cd-abe4-f272a0ac870a",
                       "name": "The operation isn't allowed in the current state of the sandbox.",
                       "originalRequest": {
@@ -2373,12 +2306,65 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                    },
+                    {
+                      "id": "75bdcb60-92a2-42d2-b841-b8349a658a65",
+                      "name": "There were server errors during the operation.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"operation\": \"reset\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/sandboxes/:sandboxId/operations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "sandboxes",
+                            ":sandboxId",
+                            "operations"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sandboxId",
+                              "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                              "description": "(Required) The sandbox UUID."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                     }
                   ]
                 },
                 {
                   "name": "List sandbox operations.",
-                  "_postman_id": "85269d3a-f0ba-40a8-848b-7b915626f250",
+                  "id": "85269d3a-f0ba-40a8-848b-7b915626f250",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -2451,8 +2437,7 @@
                           "id": "8fbbd912-d724-4635-b361-0d94662655ef",
                           "key": "sandboxId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID.",
-                          "type": "string"
+                          "description": "(Required) The sandbox UUID."
                         }
                       ]
                     },
@@ -2460,8 +2445,8 @@
                   },
                   "response": [
                     {
-                      "id": "015002bb-7dbe-412d-9982-84c302558156",
-                      "name": "There isn't any sandbox with that ID.",
+                      "id": "aaf32208-13cb-42b5-ab30-187ea4436f03",
+                      "name": "List of operations.",
                       "originalRequest": {
                         "method": "GET",
                         "header": [
@@ -2528,10 +2513,34 @@
                           ]
                         }
                       },
-                      "status": "Not Found",
-                      "code": 404,
+                      "status": "OK",
+                      "code": 200,
                       "_postman_previewlanguage": "json",
                       "header": [
+                        {
+                          "disabled": false,
+                          "description": "Paging metadata, as described in <a href=\"https://tools.ietf.org/html/rfc5988\">RFC-5988</a>",
+                          "key": "Link",
+                          "value": "quis ea culpa sunt"
+                        },
+                        {
+                          "disabled": false,
+                          "description": "Total count of elements.",
+                          "key": "X-Pagination-Count",
+                          "value": "-95518359"
+                        },
+                        {
+                          "disabled": false,
+                          "description": "Current page index.",
+                          "key": "X-Pagination-Page",
+                          "value": "-95518359"
+                        },
+                        {
+                          "disabled": false,
+                          "description": "Maximum count of pages.",
+                          "key": "X-Pagination-Limit",
+                          "value": "-95518359"
+                        },
                         {
                           "key": "Content-Type",
                           "value": "application/json"
@@ -2539,7 +2548,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                      "body": "{\n \"kind\": \"SandboxUsage\",\n \"code\": 87979609,\n \"status\": \"Failure\",\n \"metadata\": {\n  \"page\": -92878106,\n  \"perPage\": 71376260,\n  \"pageCount\": -64424717,\n  \"totalCount\": 87993522,\n  \"links\": {\n   \"self\": \"deserunt dolor aliquip in\",\n   \"first\": \"pariatur commodo ut veniam\",\n   \"previous\": \"in Lorem sit in\",\n   \"next\": \"ea sed consectetur amet\",\n   \"last\": \"labore\"\n  }\n },\n \"data\": [\n  {\n   \"id\": \"irure exercitation esse\",\n   \"operation\": \"restart\",\n   \"operationState\": \"pending\",\n   \"createdAt\": \"1975-08-18T17:31:27.513Z\",\n   \"sandboxState\": \"failed\",\n   \"status\": \"success\"\n  },\n  {\n   \"id\": \"nulla commodo\",\n   \"operation\": \"restart\",\n   \"operationState\": \"running\",\n   \"createdAt\": \"2000-10-14T12:18:21.889Z\",\n   \"sandboxState\": \"resetting\",\n   \"status\": \"failure\"\n  }\n ]\n}"
                     },
                     {
                       "id": "26011993-f3ae-4d38-a1e4-3d476079a058",
@@ -2706,8 +2715,8 @@
                       "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                     },
                     {
-                      "id": "aaf32208-13cb-42b5-ab30-187ea4436f03",
-                      "name": "List of operations.",
+                      "id": "015002bb-7dbe-412d-9982-84c302558156",
+                      "name": "There isn't any sandbox with that ID.",
                       "originalRequest": {
                         "method": "GET",
                         "header": [
@@ -2774,34 +2783,10 @@
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
+                      "status": "Not Found",
+                      "code": 404,
                       "_postman_previewlanguage": "json",
                       "header": [
-                        {
-                          "disabled": false,
-                          "description": "Paging metadata, as described in <a href=\"https://tools.ietf.org/html/rfc5988\">RFC-5988</a>",
-                          "key": "Link",
-                          "value": "quis ea culpa sunt"
-                        },
-                        {
-                          "disabled": false,
-                          "description": "Total count of elements.",
-                          "key": "X-Pagination-Count",
-                          "value": "-95518359"
-                        },
-                        {
-                          "disabled": false,
-                          "description": "Current page index.",
-                          "key": "X-Pagination-Page",
-                          "value": "-95518359"
-                        },
-                        {
-                          "disabled": false,
-                          "description": "Maximum count of pages.",
-                          "key": "X-Pagination-Limit",
-                          "value": "-95518359"
-                        },
                         {
                           "key": "Content-Type",
                           "value": "application/json"
@@ -2809,7 +2794,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n \"kind\": \"SandboxUsage\",\n \"code\": 87979609,\n \"status\": \"Failure\",\n \"metadata\": {\n  \"page\": -92878106,\n  \"perPage\": 71376260,\n  \"pageCount\": -64424717,\n  \"totalCount\": 87993522,\n  \"links\": {\n   \"self\": \"deserunt dolor aliquip in\",\n   \"first\": \"pariatur commodo ut veniam\",\n   \"previous\": \"in Lorem sit in\",\n   \"next\": \"ea sed consectetur amet\",\n   \"last\": \"labore\"\n  }\n },\n \"data\": [\n  {\n   \"id\": \"irure exercitation esse\",\n   \"operation\": \"restart\",\n   \"operationState\": \"pending\",\n   \"createdAt\": \"1975-08-18T17:31:27.513Z\",\n   \"sandboxState\": \"failed\",\n   \"status\": \"success\"\n  },\n  {\n   \"id\": \"nulla commodo\",\n   \"operation\": \"restart\",\n   \"operationState\": \"running\",\n   \"createdAt\": \"2000-10-14T12:18:21.889Z\",\n   \"sandboxState\": \"resetting\",\n   \"status\": \"failure\"\n  }\n ]\n}"
+                      "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                     },
                     {
                       "id": "b4010189-148d-4001-a3ae-71dd7d65338b",
@@ -2897,7 +2882,7 @@
                 },
                 {
                   "name": "Retrieve sandbox operation.",
-                  "_postman_id": "a5315614-3eda-4113-b366-63045d5c2cbf",
+                  "id": "a5315614-3eda-4113-b366-63045d5c2cbf",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -2924,15 +2909,13 @@
                           "id": "5e72992f-64c9-46a0-b2c5-49dc93fdfa00",
                           "key": "sandboxId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID.",
-                          "type": "string"
+                          "description": "(Required) The sandbox UUID."
                         },
                         {
                           "id": "4ec43aa7-6674-4c6d-a3e9-45b38b44b688",
                           "key": "operationId",
                           "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The operation UUID.",
-                          "type": "string"
+                          "description": "(Required) The operation UUID."
                         }
                       ]
                     },
@@ -3142,12 +3125,11 @@
                   ]
                 }
               ],
-              "_postman_id": "22deac3a-b263-46b0-9b3e-d4739ba3ba13",
-              "_postman_isSubFolder": true
+              "id": "22deac3a-b263-46b0-9b3e-d4739ba3ba13"
             },
             {
               "name": "Retrieve sandbox information.",
-              "_postman_id": "642d3c6b-dfe6-4513-902c-eafeabc3c859",
+              "id": "642d3c6b-dfe6-4513-902c-eafeabc3c859",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3172,57 +3154,13 @@
                       "id": "a9084d9b-3589-41b5-b559-94e81bc5e0db",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
                 "description": "Return details on a specific sandbox in a realm."
               },
               "response": [
-                {
-                  "id": "5c179b61-34ea-475e-b72e-c03187338d35",
-                  "name": "There isn't any realm with that ID.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Not Found",
-                  "code": 404,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
                 {
                   "id": "861cc280-2890-4816-97c1-32d4394f5723",
                   "name": "Details on the sandbox (including its state).",
@@ -3351,12 +3289,55 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "5c179b61-34ea-475e-b72e-c03187338d35",
+                  "name": "There isn't any realm with that ID.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 }
               ]
             },
             {
               "name": "Update sandbox.",
-              "_postman_id": "6b4d5cf3-d6e9-4721-a1e5-ae9aa740614b",
+              "id": "6b4d5cf3-d6e9-4721-a1e5-ae9aa740614b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3395,14 +3376,65 @@
                       "id": "708c3748-89f5-41be-a6b8-af89651752dc",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
                 "description": "Update a sandbox."
               },
               "response": [
+                {
+                  "id": "edda7406-5eed-423a-9145-d75ee3bd8c03",
+                  "name": "Updated details on the sandbox (including its state).",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"ttl\": 8,\n    \"autoScheduled\": false\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 70898887,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"deserunt id ipsum ea\",\n  \"realm\": \"fugiat labore ullamco\",\n  \"instance\": \"deserunt\",\n  \"versions\": {\n   \"app\": \"9.7.4.5.1.2\",\n   \"web\": \"8.9.2.8.6.2\"\n  },\n  \"autoScheduled\": false,\n  \"resourceProfile\": \"medium\",\n  \"state\": \"creating\",\n  \"createdAt\": \"1959-01-01T16:47:27.672Z\",\n  \"createdBy\": \"in\",\n  \"deletedAt\": \"1983-07-28T12:42:54.635Z\",\n  \"deletedBy\": \"ea sed in\",\n  \"eol\": \"2001-09-29T00:49:58.063Z\",\n  \"hostName\": \"mollit labore ullamco aliqua\",\n  \"links\": {\n   \"bm\": \"et commodo irure ut\",\n   \"ocapi\": \"magna in sunt\",\n   \"impex\": \"et tempor incididunt\",\n   \"code\": \"nulla\",\n   \"logs\": \"Excepteur mollit cupidatat sunt irure\"\n  }\n }\n}"
+                },
                 {
                   "id": "01d8f3f7-585b-4f4f-b4a1-9ce2f26965db",
                   "name": "The request parameters are invalid (bad request).",
@@ -3444,58 +3476,6 @@
                   },
                   "status": "Bad Request",
                   "code": 400,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
-                {
-                  "id": "8fc02e12-d11b-4988-8a1d-d8179da94284",
-                  "name": "There isn't any sandbox with that ID.",
-                  "originalRequest": {
-                    "method": "PATCH",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"ttl\": 8,\n    \"autoScheduled\": false\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Not Found",
-                  "code": 404,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -3560,8 +3540,8 @@
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 },
                 {
-                  "id": "edda7406-5eed-423a-9145-d75ee3bd8c03",
-                  "name": "Updated details on the sandbox (including its state).",
+                  "id": "8fc02e12-d11b-4988-8a1d-d8179da94284",
+                  "name": "There isn't any sandbox with that ID.",
                   "originalRequest": {
                     "method": "PATCH",
                     "header": [
@@ -3598,8 +3578,8 @@
                       ]
                     }
                   },
-                  "status": "OK",
-                  "code": 200,
+                  "status": "Not Found",
+                  "code": 404,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -3609,13 +3589,13 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 70898887,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"deserunt id ipsum ea\",\n  \"realm\": \"fugiat labore ullamco\",\n  \"instance\": \"deserunt\",\n  \"versions\": {\n   \"app\": \"9.7.4.5.1.2\",\n   \"web\": \"8.9.2.8.6.2\"\n  },\n  \"autoScheduled\": false,\n  \"resourceProfile\": \"medium\",\n  \"state\": \"creating\",\n  \"createdAt\": \"1959-01-01T16:47:27.672Z\",\n  \"createdBy\": \"in\",\n  \"deletedAt\": \"1983-07-28T12:42:54.635Z\",\n  \"deletedBy\": \"ea sed in\",\n  \"eol\": \"2001-09-29T00:49:58.063Z\",\n  \"hostName\": \"mollit labore ullamco aliqua\",\n  \"links\": {\n   \"bm\": \"et commodo irure ut\",\n   \"ocapi\": \"magna in sunt\",\n   \"impex\": \"et tempor incididunt\",\n   \"code\": \"nulla\",\n   \"logs\": \"Excepteur mollit cupidatat sunt irure\"\n  }\n }\n}"
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 }
               ]
             },
             {
               "name": "Delete sandbox.",
-              "_postman_id": "97ed31ed-c5b2-42da-87a6-91ee5fb9ddcf",
+              "id": "97ed31ed-c5b2-42da-87a6-91ee5fb9ddcf",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3640,8 +3620,7 @@
                       "id": "55f30798-4fd3-4da7-a777-12d35f5e18f2",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
@@ -3649,8 +3628,8 @@
               },
               "response": [
                 {
-                  "id": "260d7481-1fd8-4686-99ba-7b1e7fa571f9",
-                  "name": "The user doesn't have access to that realm.",
+                  "id": "b737002b-07a8-47b5-b088-3d36e38476a3",
+                  "name": "The request for deleting the sandbox has been accepted by the API server. This doesn't mean that the sandbox has already been deleted, since the actual deletion process does not necessarily start immediately and might take a while. You can track the delet",
                   "originalRequest": {
                     "method": "DELETE",
                     "header": [
@@ -3678,8 +3657,8 @@
                       ]
                     }
                   },
-                  "status": "Forbidden",
-                  "code": 403,
+                  "status": "Accepted",
+                  "code": 202,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -3689,7 +3668,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                  "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 18083913,\n \"status\": \"Failure\"\n}"
                 },
                 {
                   "id": "5bee2853-e4aa-4d50-88c6-75af1798a417",
@@ -3735,8 +3714,8 @@
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 },
                 {
-                  "id": "b737002b-07a8-47b5-b088-3d36e38476a3",
-                  "name": "The request for deleting the sandbox has been accepted by the API server. This doesn't mean that the sandbox has already been deleted, since the actual deletion process does not necessarily start immediately and might take a while. You can track the delet",
+                  "id": "260d7481-1fd8-4686-99ba-7b1e7fa571f9",
+                  "name": "The user doesn't have access to that realm.",
                   "originalRequest": {
                     "method": "DELETE",
                     "header": [
@@ -3764,8 +3743,8 @@
                       ]
                     }
                   },
-                  "status": "Accepted",
-                  "code": 202,
+                  "status": "Forbidden",
+                  "code": 403,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -3775,7 +3754,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 18083913,\n \"status\": \"Failure\"\n}"
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 },
                 {
                   "id": "c974c884-1eec-423a-ac3e-f5c251a3e48c",
@@ -3824,7 +3803,7 @@
             },
             {
               "name": "Show sandbox settings.",
-              "_postman_id": "a33d6368-c89c-41a0-8738-c3f9b2c8b926",
+              "id": "a33d6368-c89c-41a0-8738-c3f9b2c8b926",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3850,58 +3829,13 @@
                       "id": "d1a12edc-0512-4d09-899d-3d24b65d1e3c",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
                 "description": "Return all settings of the sandbox."
               },
               "response": [
-                {
-                  "id": "0c78a22e-037e-4fe2-b506-274f20245da7",
-                  "name": "The user doesn't have access to the requested sandbox.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/settings",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId",
-                        "settings"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Forbidden",
-                  "code": 403,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
                 {
                   "id": "710b28fc-5774-4921-ad88-fc20d4e14aa1",
                   "name": "Details of the sandbox settings.",
@@ -3947,50 +3881,6 @@
                   "body": "{\n \"kind\": \"RealmUsage\",\n \"code\": -76731787,\n \"status\": \"Success\",\n \"data\": {\n  \"ocapi\": [\n   {\n    \"client_id\": \"urn:uuid:a77302b7-14cd-fcb0-d866-8a7618d43e0c\",\n    \"resources\": [\n     {\n      \"methods\": [\n       \"put\",\n       \"post\"\n      ],\n      \"resource_id\": \"eu nulla non aliqua\",\n      \"read_attributes\": \"Lorem id nostrud Duis\",\n      \"write_attributes\": \"consectetur commodo occaecat qui\",\n      \"version_range\": [\n       {\n        \"from\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"until\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n       },\n       {\n        \"from\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"until\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n       }\n      ]\n     },\n     {\n      \"methods\": [\n       \"get\",\n       \"post\"\n      ],\n      \"resource_id\": \"elit eiusmod ad aliquip\",\n      \"read_attributes\": \"dolor ad occaecat\",\n      \"write_attributes\": \"elit culpa sit reprehenderit\",\n      \"version_range\": [\n       {\n        \"from\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"until\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n       },\n       {\n        \"from\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"until\": {\n         \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n       }\n      ]\n     }\n    ]\n   }\n  ],\n  \"webdav\": [\n   {\n    \"client_id\": \"urn:uuid:c2618d88-9c76-57bc-c471-710e6141340c\",\n    \"permissions\": [\n     {\n      \"path\": \"laborum amet dolore\",\n      \"operations\": [\n       \"read\"\n      ]\n     },\n     {\n      \"path\": \"mollit nisi laboris\",\n      \"operations\": [\n       \"read_write\"\n      ]\n     }\n    ]\n   }\n  ]\n }\n}"
                 },
                 {
-                  "id": "92f71cfe-7bd0-454b-8cb6-289ab506927f",
-                  "name": "There isn't any sandbox matching the ID.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/settings",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId",
-                        "settings"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Not Found",
-                  "code": 404,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
-                {
                   "id": "a07b3297-c826-4792-a2f4-dd2954ff8074",
                   "name": "The sandbox ID isn't valid.",
                   "originalRequest": {
@@ -4033,12 +3923,100 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "0c78a22e-037e-4fe2-b506-274f20245da7",
+                  "name": "The user doesn't have access to the requested sandbox.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/settings",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId",
+                        "settings"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "92f71cfe-7bd0-454b-8cb6-289ab506927f",
+                  "name": "There isn't any sandbox matching the ID.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/settings",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId",
+                        "settings"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 }
               ]
             },
             {
               "name": "Show sandbox usage.",
-              "_postman_id": "0f2cd601-447b-445c-ab4d-95097b630ba5",
+              "id": "0f2cd601-447b-445c-ab4d-95097b630ba5",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4076,8 +4054,7 @@
                       "id": "6824e0fe-fd20-4aca-8558-aedd3f25b655",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
@@ -4085,8 +4062,8 @@
               },
               "response": [
                 {
-                  "id": "a8b5948a-d654-4845-bb94-0fb3d4f00e41",
-                  "name": "The user doesn't have access to the requested sandbox.",
+                  "id": "fb9fd6ec-5000-4a7d-a07e-d228c52bf39e",
+                  "name": "Sandbox usage information.",
                   "originalRequest": {
                     "method": "GET",
                     "header": [
@@ -4125,8 +4102,8 @@
                       ]
                     }
                   },
-                  "status": "Forbidden",
-                  "code": 403,
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -4136,7 +4113,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                  "body": "{\n \"kind\": \"RealmConfiguration\",\n \"code\": 5972707,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"qui do\",\n  \"sandboxSeconds\": 51607411,\n  \"minutesUp\": 360000,\n  \"minutesDown\": 180000,\n  \"history\": [\n   {\n    \"from\": \"1949-07-08T12:11:23.395Z\",\n    \"to\": \"2021-06-20T18:35:08.160Z\",\n    \"sandboxSeconds\": 67582389,\n    \"resourceProfile\": \"medium\",\n    \"exceedsTimeframe\": true\n   },\n   {\n    \"from\": \"1963-04-03T01:10:58.761Z\",\n    \"to\": \"1959-12-30T22:43:58.236Z\",\n    \"sandboxSeconds\": -96713622,\n    \"resourceProfile\": \"medium\",\n    \"exceedsTimeframe\": false\n   }\n  ]\n }\n}"
                 },
                 {
                   "id": "ce8ba861-a678-4dda-9e13-600527c17592",
@@ -4181,6 +4158,60 @@
                   },
                   "status": "Bad Request",
                   "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "a8b5948a-d654-4845-bb94-0fb3d4f00e41",
+                  "name": "The user doesn't have access to the requested sandbox.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/usage?from=1995-03-05&to=1995-03-05",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId",
+                        "usage"
+                      ],
+                      "query": [
+                        {
+                          "key": "from",
+                          "value": "1995-03-05"
+                        },
+                        {
+                          "key": "to",
+                          "value": "1995-03-05"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
                   "_postman_previewlanguage": "json",
                   "header": [
                     {
@@ -4245,66 +4276,12 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
-                {
-                  "id": "fb9fd6ec-5000-4a7d-a07e-d228c52bf39e",
-                  "name": "Sandbox usage information.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/usage?from=1995-03-05&to=1995-03-05",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId",
-                        "usage"
-                      ],
-                      "query": [
-                        {
-                          "key": "from",
-                          "value": "1995-03-05"
-                        },
-                        {
-                          "key": "to",
-                          "value": "1995-03-05"
-                        }
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"RealmConfiguration\",\n \"code\": 5972707,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"qui do\",\n  \"sandboxSeconds\": 51607411,\n  \"minutesUp\": 360000,\n  \"minutesDown\": 180000,\n  \"history\": [\n   {\n    \"from\": \"1949-07-08T12:11:23.395Z\",\n    \"to\": \"2021-06-20T18:35:08.160Z\",\n    \"sandboxSeconds\": 67582389,\n    \"resourceProfile\": \"medium\",\n    \"exceedsTimeframe\": true\n   },\n   {\n    \"from\": \"1963-04-03T01:10:58.761Z\",\n    \"to\": \"1959-12-30T22:43:58.236Z\",\n    \"sandboxSeconds\": -96713622,\n    \"resourceProfile\": \"medium\",\n    \"exceedsTimeframe\": false\n   }\n  ]\n }\n}"
                 }
               ]
             },
             {
               "name": "Show sandbox storage",
-              "_postman_id": "3d293a6c-0657-4097-8adb-30000ce73b32",
+              "id": "3d293a6c-0657-4097-8adb-30000ce73b32",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4330,58 +4307,13 @@
                       "id": "8b00ac0b-6591-418f-8333-8f7483221ca7",
                       "key": "sandboxId",
                       "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                      "description": "(Required) The sandbox UUID.",
-                      "type": "string"
+                      "description": "(Required) The sandbox UUID."
                     }
                   ]
                 },
                 "description": "Return information on sandbox storage capacity for a currently running sandbox."
               },
               "response": [
-                {
-                  "id": "09acaf12-76c4-480b-8bb9-8bd75eb064cf",
-                  "name": "The user doesn't have access to the requested sandbox.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/storage",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId",
-                        "storage"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Forbidden",
-                  "code": 403,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
                 {
                   "id": "3ec4c076-52f8-4c15-9fa8-c1890c39f59a",
                   "name": "Sandbox storage information.",
@@ -4427,50 +4359,6 @@
                   "body": "{\n \"kind\": \"SandboxStorage\",\n \"code\": 97665039,\n \"status\": \"Failure\",\n \"data\": {}\n}"
                 },
                 {
-                  "id": "529b19cf-26df-4cdd-a2e1-ebda9b9d57cd",
-                  "name": "There isn't any sandbox matching the ID.",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "description": "Added as a part of security scheme: oauth2",
-                        "key": "Authorization",
-                        "value": "<token>"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/storage",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "sandboxes",
-                        ":sandboxId",
-                        "storage"
-                      ],
-                      "variable": [
-                        {
-                          "key": "sandboxId",
-                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
-                          "description": "(Required) The sandbox UUID."
-                        }
-                      ]
-                    }
-                  },
-                  "status": "Not Found",
-                  "code": 404,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-                },
-                {
                   "id": "97e0caef-0bfa-44fe-abc8-f6da778cea50",
                   "name": "The sandbox ID isn't valid.",
                   "originalRequest": {
@@ -4513,16 +4401,103 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "09acaf12-76c4-480b-8bb9-8bd75eb064cf",
+                  "name": "The user doesn't have access to the requested sandbox.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/storage",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId",
+                        "storage"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+                },
+                {
+                  "id": "529b19cf-26df-4cdd-a2e1-ebda9b9d57cd",
+                  "name": "There isn't any sandbox matching the ID.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/sandboxes/:sandboxId/storage",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "sandboxes",
+                        ":sandboxId",
+                        "storage"
+                      ],
+                      "variable": [
+                        {
+                          "key": "sandboxId",
+                          "value": "fbffaa36-0e9c-ce7b-d410-9652ca1b5b89",
+                          "description": "(Required) The sandbox UUID."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
                 }
               ]
             }
           ],
-          "_postman_id": "e6c8f70c-d90e-4b6f-b0e7-4f1e59f39ba6",
-          "_postman_isSubFolder": true
+          "id": "e6c8f70c-d90e-4b6f-b0e7-4f1e59f39ba6"
         },
         {
           "name": "List sandboxes.",
-          "_postman_id": "6080ddde-9953-47d6-a2f0-21c7342a7aed",
+          "id": "6080ddde-9953-47d6-a2f0-21c7342a7aed",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4552,47 +4527,6 @@
             "description": "Return all sandboxes of a realm."
           },
           "response": [
-            {
-              "id": "18796280-a320-4699-a4a3-5a1d42a89ea4",
-              "name": "The user doesn't have access to that realm.",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/sandboxes?include_deleted=true",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "sandboxes"
-                  ],
-                  "query": [
-                    {
-                      "key": "include_deleted",
-                      "value": "true"
-                    }
-                  ]
-                }
-              },
-              "status": "Forbidden",
-              "code": 403,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-            },
             {
               "id": "70e6e5c8-957c-40dd-afac-b84019d0f09a",
               "name": "List of sandboxes.",
@@ -4635,47 +4569,6 @@
               "body": "{\n \"kind\": \"Status\",\n \"code\": -56580564,\n \"status\": \"Success\",\n \"data\": [\n  {\n   \"id\": \"ut consectetur ut fugiat\",\n   \"realm\": \"nulla Duis occaecat qui do\",\n   \"instance\": \"mollit irure dolor\",\n   \"versions\": {\n    \"app\": \"9.5\",\n    \"web\": \"7.8.9.3.2.1.4.0.0.3\"\n   },\n   \"autoScheduled\": true,\n   \"resourceProfile\": \"large\",\n   \"state\": \"stopped\",\n   \"createdAt\": \"1972-11-14T18:45:00.857Z\",\n   \"createdBy\": \"occaecat irure\",\n   \"deletedAt\": \"2003-06-01T23:57:42.524Z\",\n   \"deletedBy\": \"adipisicing in ullamco\",\n   \"eol\": \"1944-03-13T00:43:12.376Z\",\n   \"hostName\": \"ea adipisicing enim amet veniam\",\n   \"links\": {\n    \"bm\": \"officia commodo\",\n    \"ocapi\": \"commodo deserunt ut esse\",\n    \"impex\": \"nulla enim anim dolor\",\n    \"code\": \"tempor\",\n    \"logs\": \"ipsum\"\n   }\n  },\n  {\n   \"id\": \"Duis aute\",\n   \"realm\": \"laborum ipsum aute\",\n   \"instance\": \"sed aute\",\n   \"versions\": {\n    \"app\": \"8.1.2.9.5.7.2.5.0.4.2\",\n    \"web\": \"3.5.1.8.9.3.1.2\"\n   },\n   \"autoScheduled\": false,\n   \"resourceProfile\": \"medium\",\n   \"state\": \"stopped\",\n   \"createdAt\": \"1954-04-28T14:59:38.264Z\",\n   \"createdBy\": \"in minim in occaecat\",\n   \"deletedAt\": \"1971-05-19T05:47:35.644Z\",\n   \"deletedBy\": \"aliquip magna minim veniam\",\n   \"eol\": \"1951-01-18T12:05:01.560Z\",\n   \"hostName\": \"velit\",\n   \"links\": {\n    \"bm\": \"Ut magna sit adipisicing\",\n    \"ocapi\": \"labore et in veniam\",\n    \"impex\": \"velit incididunt ea ipsum exercitation\",\n    \"code\": \"irure\",\n    \"logs\": \"ut enim i\"\n   }\n  }\n ]\n}"
             },
             {
-              "id": "7f7dca59-fa8f-4acd-864d-79d7876769ab",
-              "name": "There isn't any realm with that ID.",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/sandboxes?include_deleted=true",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "sandboxes"
-                  ],
-                  "query": [
-                    {
-                      "key": "include_deleted",
-                      "value": "true"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-            },
-            {
               "id": "fe8f69e4-6fc9-47fe-b4e3-5f1baa01c0df",
               "name": "The request parameters are invalid (bad request).",
               "originalRequest": {
@@ -4715,12 +4608,94 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+            },
+            {
+              "id": "18796280-a320-4699-a4a3-5a1d42a89ea4",
+              "name": "The user doesn't have access to that realm.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/sandboxes?include_deleted=true",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sandboxes"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_deleted",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+            },
+            {
+              "id": "7f7dca59-fa8f-4acd-864d-79d7876769ab",
+              "name": "There isn't any realm with that ID.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/sandboxes?include_deleted=true",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "sandboxes"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_deleted",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
             }
           ]
         },
         {
           "name": "Create sandbox.",
-          "_postman_id": "d7aa76f8-96a0-4eab-8f95-db3eded09b9b",
+          "id": "d7aa76f8-96a0-4eab-8f95-db3eded09b9b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4750,8 +4725,8 @@
           },
           "response": [
             {
-              "id": "436253f1-2f47-4a02-9470-f44bc49a3804",
-              "name": "There isn't any realm with that ID.",
+              "id": "e2b2a7ca-b8a9-4672-87be-4e92e0834cc1",
+              "name": "The sandbox creation has started.",
               "originalRequest": {
                 "method": "POST",
                 "header": [
@@ -4772,10 +4747,16 @@
                 },
                 "url": "{{baseUrl}}/sandboxes"
               },
-              "status": "Not Found",
-              "code": 404,
+              "status": "Created",
+              "code": 201,
               "_postman_previewlanguage": "json",
               "header": [
+                {
+                  "disabled": false,
+                  "description": "URI of the created sandbox.",
+                  "key": "Location",
+                  "value": "quis ea culpa sunt"
+                },
                 {
                   "key": "Content-Type",
                   "value": "application/json"
@@ -4783,7 +4764,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+              "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 70898887,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"deserunt id ipsum ea\",\n  \"realm\": \"fugiat labore ullamco\",\n  \"instance\": \"deserunt\",\n  \"versions\": {\n   \"app\": \"9.7.4.5.1.2\",\n   \"web\": \"8.9.2.8.6.2\"\n  },\n  \"autoScheduled\": false,\n  \"resourceProfile\": \"medium\",\n  \"state\": \"creating\",\n  \"createdAt\": \"1959-01-01T16:47:27.672Z\",\n  \"createdBy\": \"in\",\n  \"deletedAt\": \"1983-07-28T12:42:54.635Z\",\n  \"deletedBy\": \"ea sed in\",\n  \"eol\": \"2001-09-29T00:49:58.063Z\",\n  \"hostName\": \"mollit labore ullamco aliqua\",\n  \"links\": {\n   \"bm\": \"et commodo irure ut\",\n   \"ocapi\": \"magna in sunt\",\n   \"impex\": \"et tempor incididunt\",\n   \"code\": \"nulla\",\n   \"logs\": \"Excepteur mollit cupidatat sunt irure\"\n  }\n }\n}"
             },
             {
               "id": "66cdd600-bd9b-4b73-8fa6-d694c81c5d4e",
@@ -4810,6 +4791,78 @@
               },
               "status": "Bad Request",
               "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+            },
+            {
+              "id": "fa3d1dd7-7f51-4a18-826c-9cf9793c2c62",
+              "name": "The user doesn't have access to the realm.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"realm\": \"occaecat enim pariatur\",\n    \"ttl\": -85332246,\n    \"autoScheduled\": false,\n    \"resourceProfile\": \"large\",\n    \"settings\": {\n        \"ocapi\": [\n            {\n                \"client_id\": \"d994ee3c-62f4-55bc-b9df-6038de9b4664\",\n                \"resources\": [\n                    {\n                        \"methods\": [\n                            \"patch\",\n                            \"patch\"\n                        ],\n                        \"resource_id\": \"Ut sit\",\n                        \"read_attributes\": \"et laboris aliqua dol\",\n                        \"write_attributes\": \"do sint irure Excepteur laboris\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"methods\": [\n                            \"put\",\n                            \"post\"\n                        ],\n                        \"resource_id\": \"fugiat eiusmod nostrud pariatur\",\n                        \"read_attributes\": \"do ea\",\n                        \"write_attributes\": \"dolore commodo occaecat ex\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"webdav\": [\n            {\n                \"client_id\": \"urn:uuid:722b9166-b9c1-9436-52c8-97b1c2d9d2f7\",\n                \"permissions\": [\n                    {\n                        \"path\": \"deserunt\",\n                        \"operations\": [\n                            \"read\"\n                        ]\n                    },\n                    {\n                        \"path\": \"ex sed elit aute cupidatat\",\n                        \"operations\": [\n                            \"read_write\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{baseUrl}}/sandboxes"
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
+            },
+            {
+              "id": "436253f1-2f47-4a02-9470-f44bc49a3804",
+              "name": "There isn't any realm with that ID.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: oauth2",
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"realm\": \"occaecat enim pariatur\",\n    \"ttl\": -85332246,\n    \"autoScheduled\": false,\n    \"resourceProfile\": \"large\",\n    \"settings\": {\n        \"ocapi\": [\n            {\n                \"client_id\": \"d994ee3c-62f4-55bc-b9df-6038de9b4664\",\n                \"resources\": [\n                    {\n                        \"methods\": [\n                            \"patch\",\n                            \"patch\"\n                        ],\n                        \"resource_id\": \"Ut sit\",\n                        \"read_attributes\": \"et laboris aliqua dol\",\n                        \"write_attributes\": \"do sint irure Excepteur laboris\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"methods\": [\n                            \"put\",\n                            \"post\"\n                        ],\n                        \"resource_id\": \"fugiat eiusmod nostrud pariatur\",\n                        \"read_attributes\": \"do ea\",\n                        \"write_attributes\": \"dolore commodo occaecat ex\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"webdav\": [\n            {\n                \"client_id\": \"urn:uuid:722b9166-b9c1-9436-52c8-97b1c2d9d2f7\",\n                \"permissions\": [\n                    {\n                        \"path\": \"deserunt\",\n                        \"operations\": [\n                            \"read\"\n                        ]\n                    },\n                    {\n                        \"path\": \"ex sed elit aute cupidatat\",\n                        \"operations\": [\n                            \"read_write\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{baseUrl}}/sandboxes"
+              },
+              "status": "Not Found",
+              "code": 404,
               "_postman_previewlanguage": "json",
               "header": [
                 {
@@ -4856,93 +4909,15 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
-            },
-            {
-              "id": "e2b2a7ca-b8a9-4672-87be-4e92e0834cc1",
-              "name": "The sandbox creation has started.",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"realm\": \"occaecat enim pariatur\",\n    \"ttl\": -85332246,\n    \"autoScheduled\": false,\n    \"resourceProfile\": \"large\",\n    \"settings\": {\n        \"ocapi\": [\n            {\n                \"client_id\": \"d994ee3c-62f4-55bc-b9df-6038de9b4664\",\n                \"resources\": [\n                    {\n                        \"methods\": [\n                            \"patch\",\n                            \"patch\"\n                        ],\n                        \"resource_id\": \"Ut sit\",\n                        \"read_attributes\": \"et laboris aliqua dol\",\n                        \"write_attributes\": \"do sint irure Excepteur laboris\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"methods\": [\n                            \"put\",\n                            \"post\"\n                        ],\n                        \"resource_id\": \"fugiat eiusmod nostrud pariatur\",\n                        \"read_attributes\": \"do ea\",\n                        \"write_attributes\": \"dolore commodo occaecat ex\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"webdav\": [\n            {\n                \"client_id\": \"urn:uuid:722b9166-b9c1-9436-52c8-97b1c2d9d2f7\",\n                \"permissions\": [\n                    {\n                        \"path\": \"deserunt\",\n                        \"operations\": [\n                            \"read\"\n                        ]\n                    },\n                    {\n                        \"path\": \"ex sed elit aute cupidatat\",\n                        \"operations\": [\n                            \"read_write\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "{{baseUrl}}/sandboxes"
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "disabled": false,
-                  "description": "URI of the created sandbox.",
-                  "key": "Location",
-                  "value": "quis ea culpa sunt"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"Sandbox\",\n \"code\": 70898887,\n \"status\": \"Success\",\n \"data\": {\n  \"id\": \"deserunt id ipsum ea\",\n  \"realm\": \"fugiat labore ullamco\",\n  \"instance\": \"deserunt\",\n  \"versions\": {\n   \"app\": \"9.7.4.5.1.2\",\n   \"web\": \"8.9.2.8.6.2\"\n  },\n  \"autoScheduled\": false,\n  \"resourceProfile\": \"medium\",\n  \"state\": \"creating\",\n  \"createdAt\": \"1959-01-01T16:47:27.672Z\",\n  \"createdBy\": \"in\",\n  \"deletedAt\": \"1983-07-28T12:42:54.635Z\",\n  \"deletedBy\": \"ea sed in\",\n  \"eol\": \"2001-09-29T00:49:58.063Z\",\n  \"hostName\": \"mollit labore ullamco aliqua\",\n  \"links\": {\n   \"bm\": \"et commodo irure ut\",\n   \"ocapi\": \"magna in sunt\",\n   \"impex\": \"et tempor incididunt\",\n   \"code\": \"nulla\",\n   \"logs\": \"Excepteur mollit cupidatat sunt irure\"\n  }\n }\n}"
-            },
-            {
-              "id": "fa3d1dd7-7f51-4a18-826c-9cf9793c2c62",
-              "name": "The user doesn't have access to the realm.",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "description": "Added as a part of security scheme: oauth2",
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"realm\": \"occaecat enim pariatur\",\n    \"ttl\": -85332246,\n    \"autoScheduled\": false,\n    \"resourceProfile\": \"large\",\n    \"settings\": {\n        \"ocapi\": [\n            {\n                \"client_id\": \"d994ee3c-62f4-55bc-b9df-6038de9b4664\",\n                \"resources\": [\n                    {\n                        \"methods\": [\n                            \"patch\",\n                            \"patch\"\n                        ],\n                        \"resource_id\": \"Ut sit\",\n                        \"read_attributes\": \"et laboris aliqua dol\",\n                        \"write_attributes\": \"do sint irure Excepteur laboris\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"methods\": [\n                            \"put\",\n                            \"post\"\n                        ],\n                        \"resource_id\": \"fugiat eiusmod nostrud pariatur\",\n                        \"read_attributes\": \"do ea\",\n                        \"write_attributes\": \"dolore commodo occaecat ex\",\n                        \"version_range\": [\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            },\n                            {\n                                \"from\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                },\n                                \"until\": {\n                                    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"webdav\": [\n            {\n                \"client_id\": \"urn:uuid:722b9166-b9c1-9436-52c8-97b1c2d9d2f7\",\n                \"permissions\": [\n                    {\n                        \"path\": \"deserunt\",\n                        \"operations\": [\n                            \"read\"\n                        ]\n                    },\n                    {\n                        \"path\": \"ex sed elit aute cupidatat\",\n                        \"operations\": [\n                            \"read_write\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "{{baseUrl}}/sandboxes"
-              },
-              "status": "Forbidden",
-              "code": 403,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"kind\": \"SandboxAlias\",\n \"code\": 95917418,\n \"status\": \"Success\",\n \"error\": {\n  \"status\": \"Failure\",\n  \"message\": \"irure in\",\n  \"reason\": \"fugiat consectetur\",\n  \"details\": {}\n }\n}"
             }
           ]
         }
       ],
-      "_postman_id": "9380de0d-1754-41c7-9438-542f235a1928"
+      "id": "9380de0d-1754-41c7-9438-542f235a1928"
     },
     {
       "name": "Retrieve API information.",
-      "_postman_id": "3f3ac65f-3324-484a-950d-ad6c52e4fff0",
+      "id": "3f3ac65f-3324-484a-950d-ad6c52e4fff0",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -4978,7 +4953,7 @@
     },
     {
       "name": "Retrieve user information.",
-      "_postman_id": "97dfce06-4792-48b5-9c2b-6f382d1ee776",
+      "id": "97dfce06-4792-48b5-9c2b-6f382d1ee776",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -5024,7 +4999,7 @@
     },
     {
       "name": "Retrieve system information",
-      "_postman_id": "8f454eef-e3de-437e-b3af-256232f9d91f",
+      "id": "8f454eef-e3de-437e-b3af-256232f9d91f",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -5067,6 +5042,36 @@
           "body": "{\n \"kind\": \"UserInfo\",\n \"code\": 32419704,\n \"status\": \"Failure\",\n \"data\": {\n  \"region\": \"enim cupidatat dolor id\",\n  \"inboundIps\": [\n   \"nostrud Lorem consectetur ad\",\n   \"occaecat dolore\"\n  ],\n  \"outboundIps\": [\n   \"veniam ipsum irure \",\n   \"eu\"\n  ]\n }\n}"
         }
       ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "e4ffb4f1-fc3d-4395-ac34-a8a101d38e76",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "a6c4faab-af04-4276-8efa-66337afaeeb0",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "dcda863c-e30a-4532-bb9d-21c72a07b813",
+      "key": "baseURL",
+      "value": "",
+      "type": "string"
     }
   ]
 }
