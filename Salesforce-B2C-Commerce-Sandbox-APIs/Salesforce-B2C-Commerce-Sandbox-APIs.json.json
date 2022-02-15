@@ -5034,18 +5034,6 @@
         "method": "POST",
         "header": [
           {
-            "key": "client_id",
-            "value": "{{commerce_AM_clientID}}",
-            "type": "text",
-            "disabled": true
-          },
-          {
-            "key": "client_secret",
-            "value": "{{commerce_AM_passwd}}",
-            "type": "text",
-            "disabled": true
-          },
-          {
             "key": "Content-Type",
             "value": "application/x-www-form-urlencoded",
             "type": "text"
@@ -5152,7 +5140,7 @@
   ],
   "variable": [
     {
-      "id": "ffd58b34-81c9-402c-b194-3cca39ff8f3c",
+      "id": "bbafb202-bdca-459e-909c-89b76156bcec",
       "key": "baseURL",
       "value": "1",
       "type": "string"
