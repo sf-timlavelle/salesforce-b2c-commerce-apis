@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "9446f522-c7e0-4d13-bbbc-c33c13e0485b",
+        "id": "1193296e-b286-4fac-a5ae-699db331ed88",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5087,7 +5087,7 @@
           "let tokenTimestamp = pm.environment.get(\"ccommerce_sandboxMgmt_encodedTimeStamp\");",
           "",
           "// Set default timeout of 15 minutes if no previous call is made",
-          "let expiresInTime = pm.environment.get(\"commerce_sandbox_expiresIn\");",
+          "let expiresInTime = pm.environment.get(\"commerce_sandboxMgmt_expiresIn\");",
           "if(!expiresInTime){",
           "    expiresInTime = 1799; ",
           "}",
@@ -5105,8 +5105,8 @@
           "    }, function (err, res) {",
           "            // Set Authorisation Response Variables",
           "            pm.environment.set('commerce_sandbox_bearerToken', res.json().access_token);",
-          "            pm.environment.set('commerce_sandbox_encodedTimeStamp', tokenTime);",
-          "            pm.environment.set('commerce_sandbox_expiresIn', res.json().expires_in);",
+          "            pm.environment.set('commerce_sandboxMgmt_encodedTimeStamp', tokenTime);",
+          "            pm.environment.set('commerce_sandboxMgmt_expiresIn', res.json().expires_in);",
           "    });",
           "} else {",
           "    console.info(\"Current token is valid\")",
@@ -5117,7 +5117,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "728ae1fb-412f-4fea-b523-eee40621d79e",
+        "id": "c69050d6-1ce6-46e0-9dc8-0bdd1133e2e7",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5127,7 +5127,7 @@
   ],
   "variable": [
     {
-      "id": "b17f9811-5c59-490f-ba4b-6c50b354a32f",
+      "id": "5d7a2abd-c4e6-4f3f-93b5-3a72038b0779",
       "key": "baseURL",
       "value": "1",
       "type": "string"
