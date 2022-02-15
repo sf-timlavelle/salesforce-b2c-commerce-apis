@@ -5031,9 +5031,20 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
-        "header": [],
-        "url": null
+        "method": "POST",
+        "header": [
+          {
+            "key": "client_id",
+            "value": "{{commerce_AM_clientID}}",
+            "type": "text"
+          },
+          {
+            "key": "client_secret",
+            "value": "{{commerce_AM_passwd}}",
+            "type": "text"
+          }
+        ],
+        "url": "https://account.demandware.com:443/dwsso/oauth2/access_token"
       },
       "response": []
     }
@@ -5100,7 +5111,7 @@
   ],
   "variable": [
     {
-      "id": "e22f8ef2-e6fc-4b2b-8d07-d14c009aef19",
+      "id": "c3ce28f7-4d7d-435f-a56a-2fc23b61d0e0",
       "key": "baseURL",
       "value": "1",
       "type": "string"
