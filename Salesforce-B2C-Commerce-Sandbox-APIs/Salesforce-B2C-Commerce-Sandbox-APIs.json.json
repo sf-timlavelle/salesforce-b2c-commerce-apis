@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "66896e6c-637d-4a90-9d0e-9f7ab3c05026",
+        "id": "e2275a78-21ca-4c45-99d3-28860c52c455",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5096,8 +5096,7 @@
           "if((tokenTime - tokenTimestamp) >= expiresInTime) {",
           "    console.warn(\"We require a new token\")",
           "    pm.sendRequest({",
-          "        url:  'https://' + pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\"), ",
-          "            {{commerce_accountManager_Host}}/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
+          "        url:  'https://' + pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\") + '&client_secret=' + pm.environment.get(\"commerce_AM_passwd\")\",",
           "        method: 'POST',",
           "        header: {",
           "            'Content-Type': 'application/x-www-form-urlencoded',",
@@ -5118,7 +5117,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "29f5eafd-60d4-462f-8ae1-5b54593448b6",
+        "id": "c39dbb0a-5c1a-45da-bfd2-96c51f6d4802",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5128,7 +5127,7 @@
   ],
   "variable": [
     {
-      "id": "964dab06-3677-48d3-9c88-4571f8ceab55",
+      "id": "682374b2-e104-4d05-81c1-aa426b45be41",
       "key": "baseURL",
       "value": "1",
       "type": "string"
