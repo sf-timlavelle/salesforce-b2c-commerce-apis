@@ -5023,6 +5023,19 @@
           "body": "{\n \"kind\": \"UserInfo\",\n \"code\": 32419704,\n \"status\": \"Failure\",\n \"data\": {\n  \"region\": \"enim cupidatat dolor id\",\n  \"inboundIps\": [\n   \"nostrud Lorem consectetur ad\",\n   \"occaecat dolore\"\n  ],\n  \"outboundIps\": [\n   \"veniam ipsum irure \",\n   \"eu\"\n  ]\n }\n}"
         }
       ]
+    },
+    {
+      "name": "New Request",
+      "id": "16519334-d99c-403d-afd5-b6c98fc50d0f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ],
   "event": [
@@ -5087,7 +5100,7 @@
   ],
   "variable": [
     {
-      "id": "cbc21b62-af77-42f1-a708-27648360ac02",
+      "id": "8f3e6b8b-7a03-4a72-8036-27d48b7ca38d",
       "key": "baseURL",
       "value": "1",
       "type": "string"
