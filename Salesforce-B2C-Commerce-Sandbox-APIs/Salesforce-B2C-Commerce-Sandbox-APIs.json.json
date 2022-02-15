@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "f22e1d8d-60fe-4a82-9066-de877dbdf4f6",
+        "id": "3ed07c5c-fe7c-45c9-8151-5223f55bd0fe",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5094,6 +5094,9 @@
           "",
           "// Refresh the OAuth token if necessary",
           "if((tokenTime - tokenTimestamp) >= expiresInTime) {",
+          "",
+          "    let formData = \"grant_type=client_credentials\";",
+          "",
           "    console.warn(\"We require a new token\")",
           "    pm.sendRequest({",
           "        url:  'https://' + pm.environment.get(\"commerce_accountManager_Host\") + '/dwsso/oauth2/access_token?client_id=' + pm.environment.get(\"commerce_AM_clientID\") + '&client_secret=' + pm.environment.get(\"commerce_AM_passwd\"),",
@@ -5119,7 +5122,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "aac35d2f-d44d-42ad-83f2-9ff38b59164a",
+        "id": "2337a506-ea86-4e3f-add9-4e4df2e269eb",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5129,7 +5132,7 @@
   ],
   "variable": [
     {
-      "id": "1f829b7a-b560-44f1-b172-2a10c8bbe355",
+      "id": "17afb3a2-57a8-40b0-893a-930c538959d3",
       "key": "baseURL",
       "value": "1",
       "type": "string"
