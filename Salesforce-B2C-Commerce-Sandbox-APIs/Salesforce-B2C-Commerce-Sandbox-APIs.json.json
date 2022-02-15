@@ -5079,19 +5079,9 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "303f427a-a208-47fa-9b7f-1733eb0642f1",
+        "id": "a55e4ed2-6b9f-4264-a80d-6718799a923e",
         "type": "text/javascript",
         "exec": [
-          "// Set Environment Variables",
-          "let user = pm.environment.get('salesforce_userName');",
-          "let accessCode = pm.environment.get('commerce_sandbox_accessCode');",
-          "let amPass = pm.environment.get('commerce_AM_passwd');",
-          "let baseString = user + ':' + accessCode + ':' + amPass;",
-          "",
-          "// Encrypt Environment Variables",
-          "let encodedString = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(baseString))",
-          "pm.environment.set('commerce_sandbox_Encoded', encodedString);",
-          "",
           "// Set base timestamps in Unix time",
           "let tokenTime = pm.variables.replaceIn('{{$timestamp}}');",
           "let tokenTimestamp = pm.environment.get(\"commerce_sandbox_encodedTimeStamp\");",
@@ -5127,7 +5117,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "71e7cf04-775e-4aab-9094-d431fe08216d",
+        "id": "6b5c37aa-e349-4ef0-9d2c-42f12b02478a",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5137,7 +5127,7 @@
   ],
   "variable": [
     {
-      "id": "0e3c5a37-b4d7-4e7e-b30c-2df8e3785ab1",
+      "id": "c2c10695-6304-429c-8617-b4d4d3352c9a",
       "key": "baseURL",
       "value": "1",
       "type": "string"
