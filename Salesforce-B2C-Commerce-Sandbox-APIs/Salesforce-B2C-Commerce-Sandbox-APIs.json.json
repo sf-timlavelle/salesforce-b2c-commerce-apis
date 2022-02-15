@@ -2369,8 +2369,7 @@
                   },
                   "request": {
                     "auth": {
-                      "type": "oauth2",
-                      "oauth2": {}
+                      "type": "noauth"
                     },
                     "method": "GET",
                     "header": [],
@@ -5058,7 +5057,7 @@
   ],
   "variable": [
     {
-      "id": "c077f58b-2237-48ab-bd15-5950fc5fa2fd",
+      "id": "e82954a4-2a4e-4935-96b6-68822bf71764",
       "key": "baseURL",
       "value": "1",
       "type": "string"
