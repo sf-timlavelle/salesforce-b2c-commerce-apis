@@ -5050,14 +5050,13 @@
           ]
         },
         "url": {
-          "raw": "https://account.demandware.com:443/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
+          "raw": "https://account.demandware.com/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
           "protocol": "https",
           "host": [
             "account",
             "demandware",
             "com"
           ],
-          "port": "443",
           "path": [
             "dwsso",
             "oauth2",
@@ -5140,7 +5139,7 @@
   ],
   "variable": [
     {
-      "id": "bbafb202-bdca-459e-909c-89b76156bcec",
+      "id": "404fba61-c5a3-413c-96eb-c91203cf47cb",
       "key": "baseURL",
       "value": "1",
       "type": "string"
