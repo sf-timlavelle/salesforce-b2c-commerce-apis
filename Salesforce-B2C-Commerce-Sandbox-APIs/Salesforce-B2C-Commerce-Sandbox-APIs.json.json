@@ -3141,7 +3141,7 @@
                   "variable": [
                     {
                       "key": "sandboxId",
-                      "value": "zzap-141",
+                      "value": "uuid",
                       "description": "(Required) The sandbox UUID."
                     }
                   ]
@@ -5167,7 +5167,7 @@
   ],
   "variable": [
     {
-      "id": "7654efd8-4f3e-4e93-958e-4764d0d6685c",
+      "id": "d06b199b-fc02-4ecd-a80e-b5799bbed60e",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
