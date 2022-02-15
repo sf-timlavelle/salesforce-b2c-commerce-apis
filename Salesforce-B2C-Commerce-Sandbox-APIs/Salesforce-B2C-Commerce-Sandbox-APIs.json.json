@@ -5047,7 +5047,7 @@
           },
           {
             "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
+            "value": "client_credentials",
             "type": "text"
           }
         ],
@@ -5068,18 +5068,15 @@
           "query": [
             {
               "key": "client_id",
-              "value": "{{commerce_AM_clientID}}",
-              "type": "text"
+              "value": "{{commerce_AM_clientID}}"
             },
             {
               "key": "client_secret",
-              "value": "{{commerce_AM_passwd}}",
-              "type": "text"
+              "value": "{{commerce_AM_passwd}}"
             },
             {
               "key": "grant_type",
-              "value": "urn:demandware:params:oauth:grant-type:client-id:dwsid:dwsecuretoken",
-              "type": "text"
+              "value": "urn:demandware:params:oauth:grant-type:client-id:dwsid:dwsecuretoken"
             }
           ]
         }
@@ -5149,7 +5146,7 @@
   ],
   "variable": [
     {
-      "id": "6c9c59a5-9634-4ae1-8469-ee0ef620d2fd",
+      "id": "123644bd-ef82-4131-98ed-002f3f747672",
       "key": "baseURL",
       "value": "1",
       "type": "string"
