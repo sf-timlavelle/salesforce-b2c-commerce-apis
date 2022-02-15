@@ -5046,7 +5046,7 @@
       ]
     },
     {
-      "name": "Sandbox Authorisation",
+      "name": "Sandbox Basic Authorisation",
       "id": "16519334-d99c-403d-afd5-b6c98fc50d0f",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -5167,7 +5167,7 @@
   ],
   "variable": [
     {
-      "id": "d06b199b-fc02-4ecd-a80e-b5799bbed60e",
+      "id": "ab409d18-d366-49ae-adfe-869bd37b5bca",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
