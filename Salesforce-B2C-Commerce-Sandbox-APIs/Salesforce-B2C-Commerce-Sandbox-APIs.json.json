@@ -5096,11 +5096,27 @@
       "response": []
     }
   ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": {
+      "clientSecret": "{{commerce_AM_passwd}}",
+      "clientId": "{{commerce_AM_clientID}}",
+      "accessTokenUrl": "{{commerce_accountManager_Host}}/dwsso/oauth2/access_token",
+      "tokenName": "sandBoxToken",
+      "challengeAlgorithm": "S256",
+      "username": "{{commerce_clientID}}",
+      "password": "{{commerce_secret}}",
+      "grant_type": "client_credentials",
+      "authUrl": "{{commerce_host}}/dwsso/oauth2/access_token",
+      "addTokenTo": "header",
+      "client_authentication": "header"
+    }
+  },
   "event": [
     {
       "listen": "prerequest",
       "script": {
-        "id": "b09d4f0e-f786-44da-bdcd-2d49d932c9a0",
+        "id": "8cdfce6d-b8ec-4896-879a-2f28a3ab7971",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5141,7 +5157,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "5f2b211e-e9b4-43a1-9e7d-7fb429e53ba4",
+        "id": "a31c64b4-c088-4169-85ee-65d8436017cf",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5151,7 +5167,7 @@
   ],
   "variable": [
     {
-      "id": "7ce85dbc-8a76-49f2-9b38-8ff5f8f6a7bc",
+      "id": "7654efd8-4f3e-4e93-958e-4764d0d6685c",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
