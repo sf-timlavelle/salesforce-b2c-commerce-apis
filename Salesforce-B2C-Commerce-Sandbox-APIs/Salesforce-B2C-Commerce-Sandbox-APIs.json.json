@@ -5079,7 +5079,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "3ed07c5c-fe7c-45c9-8151-5223f55bd0fe",
+        "id": "1018f5c2-1e89-4895-967b-8f3c4288742b",
         "type": "text/javascript",
         "exec": [
           "// Set base timestamps in Unix time",
@@ -5104,9 +5104,7 @@
           "        header: {",
           "            'Content-Type': 'application/x-www-form-urlencoded'",
           "        },",
-          "        data: {",
-          "            \"grant_type=client_credentials\"",
-          "        }",
+          "        body: formData",
           "    }, function (err, res) {",
           "            // Set Authorisation Response Variables",
           "            pm.environment.set('commerce_sandboxMgmt_bearerToken', res.json().access_token);",
@@ -5122,7 +5120,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "2337a506-ea86-4e3f-add9-4e4df2e269eb",
+        "id": "13ff9cbd-f3f1-4f89-b8b7-d5c52698f2b8",
         "type": "text/javascript",
         "exec": [
           ""
@@ -5132,7 +5130,7 @@
   ],
   "variable": [
     {
-      "id": "17afb3a2-57a8-40b0-893a-930c538959d3",
+      "id": "994e9443-0d59-433d-9b4e-b1355eee38fa",
       "key": "baseURL",
       "value": "1",
       "type": "string"
