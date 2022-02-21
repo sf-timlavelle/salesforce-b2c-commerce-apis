@@ -4497,7 +4497,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/sandboxes",
+              "raw": "{{baseUrl}}/sandboxes?include_deleted=false",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -4507,9 +4507,8 @@
               "query": [
                 {
                   "key": "include_deleted",
-                  "value": "true",
-                  "description": "If set, return deleted sandboxes.",
-                  "disabled": true
+                  "value": "false",
+                  "description": "If set, return deleted sandboxes."
                 }
               ]
             },
@@ -5217,7 +5216,7 @@
   ],
   "variable": [
     {
-      "id": "4cf89033-f786-4aeb-98cc-8b9a58fd6600",
+      "id": "af3aa14f-4b15-4bf1-881c-71f9ee39ed13",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
