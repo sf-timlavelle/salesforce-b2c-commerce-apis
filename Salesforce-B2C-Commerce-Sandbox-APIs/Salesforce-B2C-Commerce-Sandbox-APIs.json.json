@@ -5093,6 +5093,51 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Sandbox OAuth2 Authorisation",
+      "id": "c2a57a14-de4e-47c2-a3b1-3ad2a56987b2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{commerce_accountManager_Host}}/dwsso/oauth2/authorize?client_id={{commerce_AM_clientID}}",
+          "host": [
+            "{{commerce_accountManager_Host}}"
+          ],
+          "path": [
+            "dwsso",
+            "oauth2",
+            "authorize"
+          ],
+          "query": [
+            {
+              "key": "client_id",
+              "value": "{{commerce_AM_clientID}}"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -5166,7 +5211,7 @@
   ],
   "variable": [
     {
-      "id": "b561fd73-cff3-44d7-a3aa-b82e908b1870",
+      "id": "deecbadc-7b56-428c-a54d-39f97ba5b73d",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
