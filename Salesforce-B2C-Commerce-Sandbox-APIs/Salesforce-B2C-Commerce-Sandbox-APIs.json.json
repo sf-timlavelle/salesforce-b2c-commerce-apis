@@ -4489,7 +4489,13 @@
               "type": "noauth"
             },
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiJEMWhPUDdEODN4TjBqZWlqaTI3WWFvZFRjL0E9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJ0aW1vdGh5LmxhdmVsbGVAc2FsZXNmb3JjZS5jb20iLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiNmJjZTM4ZTAtNDhhOS00YjQxLTgyNTctNGEzY2RlZWUzZWY5LTU5NzcwMDMwIiwic3VibmFtZSI6InRpbW90aHkubGF2ZWxsZUBzYWxlc2ZvcmNlLmNvbSIsImlzcyI6Imh0dHBzOi8vYWNjb3VudC5kZW1hbmR3YXJlLmNvbTo0NDMvZHdzc28vb2F1dGgyIiwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImF1dGhHcmFudElkIjoibXN5UG93dFhWSGdlT3J4Skw3OHBoN1l5U3pjIiwiYXVkIjoiZTE4ZmJhMjctMTg2Ny00N2Q5LWE5YzMtMTQzY2RiMDUwZWQ1IiwibmJmIjoxNjQ1NDc4ODI5LCJncmFudF90eXBlIjoidG9rZW4iLCJzY29wZSI6WyJtYWlsIl0sImF1dGhfdGltZSI6MTY0NTQ2OTk3MiwicmVhbG0iOiIvIiwiZXhwIjoxNjQ1NDgwNjI5LCJpYXQiOjE2NDU0Nzg4MjksImV4cGlyZXNfaW4iOjE4MDAsImp0aSI6IktLMC1lS2NWVWtaaExsQjdYYjJjelNCNFAzdyIsImNsaWVudF9pZCI6ImUxOGZiYTI3LTE4NjctNDdkOS1hOWMzLTE0M2NkYjA1MGVkNSJ9.okA6Y2J054cPpAeiyUVugCe95GoGxhgxo0HfkrRKD5lbSVTgMdyKd2THo7JI6xoBIuVHyZ1DvCxwU7dv9uJmYrsgvEC__asYB9A76a2SaGY0KV9WMP-Jqv-gE_8XdimBBk1fYQBcbx3aUHddTGmP85iDbncwwC0XuZC1bkzusiKGPA-gb80sw21xJZF68BAbPk1DRaRsip4Q1eBtvKvD6MtbkmKdsCnYHe0zrJfm_9uX8I_-EFoJEtoEpcSDAEAcb9cUfP5NlkHFKr3qy7y2nfFkRrAKzG0NgTfDBplSQRrQFTf8fC6Vo7MUuhxB0iX0U_VA9tJAbxX1iEJf9_-mrg ",
+                "type": "text"
+              }
+            ],
             "url": {
               "raw": "{{baseUrl}}/sandboxes",
               "host": [
@@ -5211,7 +5217,7 @@
   ],
   "variable": [
     {
-      "id": "1e6ecba9-2f04-4dd1-94b3-fa9568d9ecd4",
+      "id": "026ce420-38e1-4611-99a2-6d7be196160f",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
