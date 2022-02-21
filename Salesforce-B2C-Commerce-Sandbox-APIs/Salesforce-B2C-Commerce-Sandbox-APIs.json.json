@@ -5125,7 +5125,7 @@
           ]
         },
         "url": {
-          "raw": "{{commerce_accountManager_Host}}/dwsso/oauth2/authorize?client_id={{commerce_AM_clientID}}&redirect_uri=https://admin.us01.dx.commercecloud.salesforce.com/oauth2-redirect.html",
+          "raw": "{{commerce_accountManager_Host}}/dwsso/oauth2/authorize?client_id={{commerce_AM_clientID}}",
           "host": [
             "{{commerce_accountManager_Host}}"
           ],
@@ -5138,11 +5138,6 @@
             {
               "key": "client_id",
               "value": "{{commerce_AM_clientID}}"
-            },
-            {
-              "key": "redirect_uri",
-              "value": "https://admin.us01.dx.commercecloud.salesforce.com/oauth2-redirect.html",
-              "type": "text"
             }
           ]
         }
@@ -5221,7 +5216,7 @@
   ],
   "variable": [
     {
-      "id": "3f6ff99e-1f48-4a5f-910d-092144df1f15",
+      "id": "9f2634e3-8ddb-4997-b336-a8a09845a611",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
