@@ -5071,8 +5071,7 @@
           ]
         },
         "url": {
-          "raw": "https://{{commerce_accountManager_Host}}/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
-          "protocol": "https",
+          "raw": "{{commerce_accountManager_Host}}/dwsso/oauth2/access_token?client_id={{commerce_AM_clientID}}&client_secret={{commerce_AM_passwd}}",
           "host": [
             "{{commerce_accountManager_Host}}"
           ],
@@ -5167,7 +5166,7 @@
   ],
   "variable": [
     {
-      "id": "ab409d18-d366-49ae-adfe-869bd37b5bca",
+      "id": "b561fd73-cff3-44d7-a3aa-b82e908b1870",
       "key": "baseUrl",
       "value": "https://admin.us01.dx.commercecloud.salesforce.com/api/v1",
       "type": "string"
